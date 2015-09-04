@@ -15,6 +15,9 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         \App\Console\Commands\Inspire::class,
         \App\Console\Commands\LogDemo::class,
+        \App\Console\Commands\Suppliers\GetCatalog::class,
+        \App\Console\Commands\Suppliers\ParseCatalog::class,
+        \App\Console\Commands\Suppliers\ActualiseProductsTable::class,
     ];
 
     /**
