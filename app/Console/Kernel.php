@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\Artisan;
 
 class Kernel extends ConsoleKernel
 {
@@ -18,6 +19,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\Suppliers\GetCatalog::class,
         \App\Console\Commands\Suppliers\ParseCatalog::class,
         \App\Console\Commands\Suppliers\ActualiseProductsTable::class,
+        \App\Console\Commands\Resellers\UpdateCatalog::class,
     ];
 
     /**
@@ -31,7 +33,47 @@ class Kernel extends ConsoleKernel
         /*$schedule->command('inspire')
                  ->hourly();
         $schedule->command('log:demo')
-            ->everyMinute();*/
+            ->everyMinute();
+        $schedule->command('supplier:parseCatalog CdiscountPro')
+            ->dailyAt('18:47');
+
+
+        $schedule->command('supplier:parseCatalog CdiscountPro')
+            ->dailyAt('18:47');
+        */
+
+        // pour tester
+
+         $schedule->command('supplier:actualiseProductsTable CdiscountPro')
+            ->dailyAt('19:02')
+            ->before(function (Artisan $artisan) {
+                $artisan::call('supplier:parseCatalog', [
+                    'supplier' => 'CdiscountPro'
+                ]);
+            })
+            ->after(function () {
+                // Task is complete...
+            });
+
+
+        // final
+
+       /* $schedule->command('supplier:parseCatalog CdiscountPro')
+            ->dailyAt('17:22')
+            ->before(function (Artisan $artisan) {
+                $artisan::call('supplier:getCatalog', [
+                    'supplier' => 'CdiscountPro'
+                ]);
+            })
+            ->after(function (Artisan $artisan) {
+                $artisan::call('supplier:actualiseProductsTable', [
+                    'supplier' => 'CdiscountPro'
+                ]);
+            });
+
+       */
+
+
 
     }
 }

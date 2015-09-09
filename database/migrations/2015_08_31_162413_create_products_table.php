@@ -20,15 +20,16 @@ class CreateProductsTable extends Migration
             $table->string('supplier_ref');
             /*The second param is to manually set the name of the unique index. Use an array as the first param to create a unique key across multiple columns.*/
             $table->unique(['supplier_id','supplier_ref']);
-            $table->string('type_id');
-            $table->string('type_value');
+            $table->string('ref_type');
+            $table->string('ref_value');
             $table->string('name',500);
             $table->string('brand',500);
             $table->string('manufacturer',500);
             $table->text('description');
+            $table->string('slug');
             $table->unsignedInteger('quantity');
             $table->float('price_ttc');
-            $table->string('eco_tax');
+            $table->string('eco_tax')->comment('En TTC');
             $table->string('vat_rate');
             $table->string('image_url');
         });

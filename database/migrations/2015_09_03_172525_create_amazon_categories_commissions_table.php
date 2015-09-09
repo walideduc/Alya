@@ -16,7 +16,7 @@ class CreateAmazonCategoriesCommissionsTable extends Migration
             $table->increments('id');
             $table->string('category',255);
             $table->unsignedInteger('percentage')->defalut('20');
-            $table->unsignedInteger('min')->nullable(); // the min commission by article .
+            $table->unsignedInteger('min')->nullable()->comment('the min commission by article');
             $table->dateTime('valid_until')->default('2020-00-00 00:00:00');
             $table->timestamps();
         });

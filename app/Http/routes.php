@@ -38,8 +38,12 @@ Route::get('/actualiseProductsTable', function () {
 });
 
 
-
-
+Route::get('/updateCatalog', function () {
+    $exitCode = Artisan::call('reseller:updateCatalog', [
+        'reseller' => 'AmazonReseller'
+    ]);
+    return $exitCode;
+});
 
 
 App::bind('CdiscountPro',function(){
@@ -48,3 +52,10 @@ App::bind('CdiscountPro',function(){
 App::bind('PixmaniaPro',function(){
     return new App\Partners\Suppliers\Suppliers\PixmaniaPro\PixmaniaPro();
 });
+
+App::bind('AmazonReseller',function(){
+    return new App\Partners\Resellers\Resellers\Amazon\AmazonReseller();
+});
+
+
+

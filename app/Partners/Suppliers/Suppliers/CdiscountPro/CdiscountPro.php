@@ -19,7 +19,7 @@ class CdiscountPro extends AbstractSupplier  {
     protected $FTP_USER = 'cdiscount' ;
     protected $FTP_PASSWORD = 'cdc' ;
     protected $supplier_id = 1 ;
-    //protected const $quantity = 20 ;
+    static $quantity = 20 ;
 
 
     protected $referenceList = array(
@@ -35,6 +35,8 @@ class CdiscountPro extends AbstractSupplier  {
 
  /*   const LOCAL_INBOX_DIR = 'cdiscount_pro/inbox/' ;
     const LOCAL_OUTBOX_DIR = 'cdiscount_pro/outbox/' ;*/
+
+
 
 
 
@@ -73,6 +75,7 @@ class CdiscountPro extends AbstractSupplier  {
         $cdicountProProductModel::resetTable()->update(['quantity' => 0  , 'is_new' => 0]);
 
         $entete = $this->readline1($fp, $fieldNames);
+        $i = 0 ;
         while($dataLine = $this->readline1($fp, $fieldNames))
         {
             $categoryId = $this->getCdiscountProCategory_id($dataLine->categorie_1);
@@ -96,7 +99,7 @@ class CdiscountPro extends AbstractSupplier  {
                     'taux_tva' => $dataLine->taux_tva,
                     'liens_images' => $dataLine->liens_images,
                     'poids' => $dataLine->poids,
-                    'quantity' => 20 ,
+                    'quantity' => self::$quantity ,
                     'is_new' => 1,
                     'category_id' => $categoryId,
                 ]);
@@ -119,11 +122,14 @@ class CdiscountPro extends AbstractSupplier  {
                     'taux_tva' => $dataLine->taux_tva,
                     'liens_images' => $dataLine->liens_images,
                     'poids' => $dataLine->poids,
-                    'quantity' => 20 ,
+                    'quantity' => self::$quantity ,
                     'is_new' => 0,
                     'category_id' => $categoryId,
                 ]);
             }
+            $i++;
+            /*if($i > 50)
+                dd($cdicountProProductModel->toArray());*/
         }
         // TODO étape n: fin de transaction
         return 1 ;
@@ -161,18 +167,23 @@ class CdiscountPro extends AbstractSupplier  {
         $cdiscountProProducts = $cdiscountProProductModel::actualiseProductsTable()->get();
         $productModel = new Product();
         foreach($cdiscountProProducts as $cdiscountProProduct){
-            $productModel::updateOrCreate(['supplier_id' => $this->supplier_id, 'supplier_ref' => $cdiscountProProduct->ref_sku] ,
+            $kfina_category_id = $productModel->matchCategoryCdiscountPro($cdiscountProProduct->category_id);  // to know the Amazon commission , because I decided to organise the commission according kfina_categories
+            $productModel::updateOrCreate(
+                ['supplier_id' => $this->supplier_id, 'supplier_ref' => $cdiscountProProduct->ref_sku] ,
                 [
                     'supplier_id' => $this->supplier_id,
                     'supplier_ref' => $cdiscountProProduct->ref_sku,
-                    'type_id' => 'ean',
-                    'type_value' => $cdiscountProProduct->ean,
+                    'category_id'=> $kfina_category_id,
+                    'ref_type' => 'ean',
+                    'ref_value' => $cdiscountProProduct->ean,
                     'name' => $cdiscountProProduct->libelle,
                     'brand' => $cdiscountProProduct->marque,
                     'manufacturer' => isset($cdiscountProProduct->manufactuer) ? $cdiscountProProduct->manufactuer : $cdiscountProProduct->marque ,
                     'description' => $cdiscountProProduct->description_principale,
+                    'slug'=> str_slug($cdiscountProProduct->libelle, "-"),
                     'quantity' => $cdiscountProProduct->quantity,
                     'price_ttc' => $cdiscountProProduct->prix_ttc ,//is->priceTtcForProduct($cdiscountProProduct),
+                    'price_ht' => $cdiscountProProduct->prix_ht ,
                     'eco_tax' => $cdiscountProProduct->eco_taxe,
                     'vat_rate' => $cdiscountProProduct->taux_tva,
                     'image_url' => $cdiscountProProduct->liens_images,
@@ -181,25 +192,4 @@ class CdiscountPro extends AbstractSupplier  {
             //dd($cdiscountProProduct->toArray());
         }
     }
-/*
-    public static function getPriceFromFormula($prix_achat_ht , $sku = null , $eco_taxe , $vat_rate  , $supplier_id ,$supplier_ref , $resellers_id){
-        $marge = self::getMarge();
-        $comm = self::getCommession($supplier_id ,  $supplier_ref , $resellers_id );
-        $tva_general = self::$tva_general ;
-        $expotrtation_ht = self::getExpotrtationHorsTaxe(); // celle de cdiscount
-        $Transport_facture_ht = self::get_Transport_facture_ht();
-        $prix_achat_avec_eco_taxe_inclu_ht = $prix_achat_ht + $eco_taxe / ( 1 + $tva_general ) ; // pour avoir le cout ttc d'eco_taxe => $eco_taxe / ( 1 + self::$tva_general )
-        //$prix_vente_ht = ($prix_achat_avec_eco_taxe_inclu_ht + $expotrtation_ht + $Transport_facture_ht * ( 1 - $comm * ( 1 + $tva_general ))   ) / ( 1 - $marge - $comm / (1 + $tva_general) ) ;
-        $prix_vente_ht = ($prix_achat_avec_eco_taxe_inclu_ht + $expotrtation_ht + $Transport_facture_ht * ( 1 - $comm * ( 1 + $tva_general ))   ) / ( 1 - $marge - $comm * (1 + $tva_general) ) ;
-        $prix_vente_ttc = ( 1 + $vat_rate ) * $prix_vente_ht ; // vat_rate celle de produit
-        //$coeff = ( $prix_vente_ttc - $expotrtation_ht * (1 + $tva_general) ) / $prix_achat_avec_eco_taxe_inclu_ht ;
-        $expotrtation_ttc = $expotrtation_ht * (1 + $tva_general);
-        $coeff = ( $prix_vente_ttc - $expotrtation_ttc ) / $prix_achat_avec_eco_taxe_inclu_ht ;
-        debug('<font size="3" color="red">sku : </font>' .  $sku .'  <br/><font size="3" color="red">supplier_id : </font>' .$supplier_id .'  <br/><font size="3" color="red">supplier_ref : </font>' .$supplier_ref.' <br/><font size="3" color="red">marge : </font>'.$marge.' <br/><font size="3" color="red">comm : </font>'.$comm .' <br/><font size="3" color="red">tva_general : </font>'.$tva_general.' <br/><font size="3" color="red">Expotrtation_ht </font>: '.$expotrtation_ht.' <br/><font size="3" color="red">Transport_facture_ht :</font> '.$Transport_facture_ht.'  <br/><font size="3" color="red">vate_rate:</font> ' .$vat_rate. '  <br/><font size="3" color="red">eco_taxe :</font> ' . $eco_taxe
-            .' <br/><font size="3" color="red">expotrtation_ttc :</font>'.$expotrtation_ttc.' <br/><font size="3" color="red">coeff :</font>'.$coeff.' <br/><font size="3" color="red">achat_ht :</font> '. $prix_achat_ht.' <br/><font size="3" color="red">prix_achat_avec_eco_taxe_inclu_ht :</font> '.$prix_achat_avec_eco_taxe_inclu_ht .' <br/><font size="3" color="red">prix_vente_ttc :</font>'.$prix_vente_ttc);
-        return array($prix_vente_ttc,$coeff) ;
-
-    }
-
-*/
 }

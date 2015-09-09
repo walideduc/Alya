@@ -8,4 +8,8 @@ class CdiscountProCategory extends Model
 {
     protected $guarded = [];
     //
+    public function CdiscountProCategories()
+    {
+        return $this->belongsToMany('App\Models\Category');
+    }
 }
