@@ -12,13 +12,15 @@ namespace App\Partners\Resellers\Resellers\Amazon;
 use App\Models\AmazonProduct;
 use App\Models\Product;
 use App\Partners\Resellers\AbstractReseller;
+use App\Partners\Resellers\Resellers\Amazon\Reports\Report;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
+use App\Partners\Resellers\Resellers\Amazon\Feeds\Feed ;
 
 class AmazonReseller extends AbstractReseller {
 
-
+    protected $feeds ;
 
     static $euroVersCentimes = 100;
     static $marge = 0.07 ; // 7%
@@ -29,13 +31,18 @@ class AmazonReseller extends AbstractReseller {
     static $transport_invoiced_ht = 0 ;  // 0 pour le moment
 
 
+    public function __construct(Feed $feed,Report $report){
+        $this->feed = $feed;
+        $this->report = $report ;
+    }
+
     public function updateCatalog(){
         $productModel = new Product();
         $products = $productModel::updateAmazonCatalog()->get();
         $amazonModel = new AmazonProduct();
         $now = Carbon::now()->toDateTimeString();
-        $i = 0 ;
         foreach($products as $product){
+
             list($price ,$coefficient) = $this->getPrice($product);
             if(is_null($existingAmazonModel = $amazonModel::where('sku',$product->id)->first())){
                 // I will insert the product

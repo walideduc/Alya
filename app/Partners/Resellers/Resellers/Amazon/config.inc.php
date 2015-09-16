@@ -55,3 +55,4 @@ function autoloadMWS($className)
         }
     }
 }
+

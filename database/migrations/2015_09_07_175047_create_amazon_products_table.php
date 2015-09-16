@@ -34,7 +34,7 @@ class CreateAmazonProductsTable extends Migration
             $table->string('image_url');
             $table->dateTime('data_changed_at');
             $table->dateTime('data_submitted_at');
-            $table->dateTime('creation_failed');
+            $table->integer('creation_failed')->default(0);
             $table->dateTime('price_changed_at');
             $table->dateTime('price_submitted_at');
             $table->dateTime('stock_changed_at');

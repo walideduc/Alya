@@ -45,17 +45,18 @@ Route::get('/updateCatalog', function () {
     return $exitCode;
 });
 
+Route::get('/submitFeed', function () {
+    //return \App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+  $exitCode = Artisan::call('amazon:submitFeed', [
+        'feedType' => 'ProductFeed',
+        'countryCode'=>'fr'
+    ]);
+    return $exitCode;
+});
 
-App::bind('CdiscountPro',function(){
-    return new App\Partners\Suppliers\Suppliers\CdiscountPro\CdiscountPro();
-});
-App::bind('PixmaniaPro',function(){
-    return new App\Partners\Suppliers\Suppliers\PixmaniaPro\PixmaniaPro();
-});
 
-App::bind('AmazonReseller',function(){
-    return new App\Partners\Resellers\Resellers\Amazon\AmazonReseller();
-});
+
+
 
 
 

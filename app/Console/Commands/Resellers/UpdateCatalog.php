@@ -40,7 +40,9 @@ class UpdateCatalog extends Command
     {
         $resellerInput = $this->argument('reseller');
         try{
+            $this->info('the supplier_id is '.$resellerInput);
             $reseller= \App::make($resellerInput);
+
             $this->info('The supplier class used is '.get_class($reseller));
             $response = $reseller->updateCatalog();
             $this->info('the supplier_id is '.$resellerInput.' and '.$response);

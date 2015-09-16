@@ -20,6 +20,9 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\Suppliers\ParseCatalog::class,
         \App\Console\Commands\Suppliers\ActualiseProductsTable::class,
         \App\Console\Commands\Resellers\UpdateCatalog::class,
+        \App\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
+        \App\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
+        \App\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
     ];
 
     /**
