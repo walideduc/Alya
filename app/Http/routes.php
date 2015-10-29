@@ -54,6 +54,21 @@ Route::get('/submitFeed', function () {
     return $exitCode;
 });
 
+Route::get('/getReport', function () {
+    ini_set('max_execution_time', 300);
+    //return \App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+    $exitCode = Artisan::call('amazon:getReport', [
+        'shortName' => 'InventoryReport',
+        'reportId' => 987654321 ,
+        'countryCode'=>'fr'
+    ]);
+    return $exitCode;
+});
+
+//Route::controller('product','ProductController');
+
+Route::resource('product', 'ProductController');
+
 
 
 

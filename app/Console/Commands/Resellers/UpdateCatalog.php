@@ -19,7 +19,7 @@ class UpdateCatalog extends Command
      *
      * @var string
      */
-    protected $description = 'Command description.';
+    protected $description = 'Update the catalog of the reseller and triggers the creation .';
 
     /**
      * Create a new command instance.

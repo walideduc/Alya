@@ -23,6 +23,12 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
         \App\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
         \App\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
+        \App\Console\Commands\Resellers\Amazon\Reports\GetReportList::class,
+        \App\Console\Commands\Resellers\Amazon\Reports\GetReport::class,
+        \App\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
+        \App\Console\Commands\PricingTest::class,
+        \App\Console\Commands\PixmaniaTest::class,
+
     ];
 
     /**

@@ -1,6 +1,7 @@
 <?php
 namespace App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
 use App\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
+use Illuminate\Support\Facades\DB;
 
 class InventoryReport extends ReportType {
 
@@ -12,9 +13,44 @@ class InventoryReport extends ReportType {
         parent::__construct(__CLASS__);
 	}
 
-	public  function parseReport($reportContents){		
+	public  function parseReport($reportContents){
+        $reportId = $this->reportId;
+        $reportContents = explode("\r\n",$reportContents);
+        unset($reportContents[0]);// parce que je la premier ligne ( sku asin price quantity )
+        $i = 0 ;
+        foreach($reportContents as $lineContent ){
+            $line  = explode("\t", $lineContent) ;
+            $one_data['sku'] = $line[0];
+            $sku_array_data[$line[0]]  = $line[1] ;// sku => asin  ;
+            $one_data['asin'] = $line[1];
+            $one_data['price'] = $line[2];
+            $one_data['quantity'] = !empty($line[3]) ? $line[3] : null ;
+            $one_data['reportId'] = $reportId;
+            $one_data['countryCode'] = $this->countryCode;
+            $res = DB::table('amazon_inventory')->insert($one_data);
+            ########  for testing ##########
+            $i++ ;
+            if ( $i > 100 ) break ;
+            ########  for testing ##########
+        }
+        $table = 'amazon_products' ;
+        if($this->countryCode!='fr') $table = $table.'_'.$this->countryCode;
 
-		return True;
+        if(!empty($sku_array_data)){ // if the report contains info, otherwise I do nothing
+            // reset the existence
+            DB::table($table)->update([
+                'existence' => 0,
+            ]);
+            // update asin and existence for sku
+            foreach( $sku_array_data as $sku => $asin ){
+                DB::table($table)->where('sku' , $sku)->update([
+                    'asin' => $asin ,
+                    'existence' => 1,
+                ]);
+            }
+        }
+        // I want to update the existence and the asin and Maybe letter if there is a change in the asin of the sku
+        return True;
 	}
 
 	public  function afterParse(){

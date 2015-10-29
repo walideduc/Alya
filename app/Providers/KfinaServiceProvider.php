@@ -74,6 +74,16 @@ class KfinaServiceProvider extends ServiceProvider
             return new \App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes\InventoryReport();
         });
 
+        $this->app->bind('UnshippedOrdersReport', function () {
+            return new \App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes\UnshippedOrdersReport();
+        });
+
+        $this->app->bind('ScheduledXMLOrderReport', function () {
+            return new \App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes\ScheduledXMLOrderReport();
+        });
+
+
+
 
 
 

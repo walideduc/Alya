@@ -73,14 +73,23 @@ class Feed {
     }
 
     public static function GetFeedSubmissionList($parametersFeed) {
+        $parametersFeed->submissionId;
+        $parametersFeed->feedType_string;
+        $parametersFeed->countryCode;
+        $parametersFeed->class;
         debug_kfina($parametersFeed);
         return $parametersFeed->submissionId ;
 
+        /*
+         * To be completed from $parmsFeed array to $parametersFeed object .
+         * I will be back after finishing with Reports :)
+         */
+
         $service = self::setServiceClient();
-        $request = new MarketplaceWebService_Model_GetFeedSubmissionListRequest();
-        $request->setMerchant(MERCHANT_ID);
+        $request = new \MarketplaceWebService_Model_GetFeedSubmissionListRequest();
+        $request->setMerchant(AmazonConfig::getMerchantIdentifier($parametersFeed->countryCode));
         //$statusList = new MarketplaceWebService_Model_StatusList();
-        $submissionIdList = new MarketplaceWebService_Model_IdList();
+        $submissionIdList = new \MarketplaceWebService_Model_IdList();
         $submissionIdList->setId($parmsFeed['submissionId']);
         $request->setFeedSubmissionIdList($submissionIdList);
         self::invokeGetFeedSubmissionList($service, $request,$parmsFeed);

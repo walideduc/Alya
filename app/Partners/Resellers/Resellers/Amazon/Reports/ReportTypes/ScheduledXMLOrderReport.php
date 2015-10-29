@@ -1,5 +1,7 @@
 <?php
-class AmazonMWS_Reports2014_ReportTypes_ScheduledXMLOrderReport extends ReportType {
+namespace App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
+use App\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
+class ScheduledXMLOrderReport extends ReportType {
 
 	public $reportTypeEnumeration = '_GET_ORDERS_DATA_' ;
 	public $countryCode ;
@@ -7,7 +9,7 @@ class AmazonMWS_Reports2014_ReportTypes_ScheduledXMLOrderReport extends ReportTy
 	public $acknowledged;
 
 	function __construct($countryCode = 'all',$acknowledged = False ) {
-		parent::__construct($countryCode);
+		parent::__construct(__CLASS__);
 		$this->acknowledged = $acknowledged;
 	}
 

@@ -25,8 +25,7 @@ class RequestReport extends Command
      *
      * @var string
      */
-    protected $description = 'The RequestReport operation creates a report request. Amazon MWS processes the report request and when
-the report is completed, sets the status of the report request to _DONE_.';
+    protected $description = 'Creates a report request to Amazon';
 
     /**
      * Create a new command instance.

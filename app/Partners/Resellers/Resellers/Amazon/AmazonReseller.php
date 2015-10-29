@@ -38,18 +38,20 @@ class AmazonReseller extends AbstractReseller {
 
     public function updateCatalog(){
         $productModel = new Product();
-        $products = $productModel::updateAmazonCatalog()->get();
+        //$products = $productModel::updateAmazonCatalog()->get();
+        $products = $productModel->take(40000)->get(); //for testing
         $amazonModel = new AmazonProduct();
         $now = Carbon::now()->toDateTimeString();
         foreach($products as $product){
-
-            list($price ,$coefficient) = $this->getPrice($product);
+            //dd($product->toArray());
+            list($price ,$coefficient) = self::getPrice($product,false);
             if(is_null($existingAmazonModel = $amazonModel::where('sku',$product->id)->first())){
                 // I will insert the product
                 $amazonModel::create([
                     'sku' => $product->id ,
                     'existence' => 0 ,
                     'locked' => 0 ,
+                    'category_id' => $product->category_id ,
                     'ref_type' => $product->ref_type ,
                     'ref_value' => $product->ref_value ,
                     'name' => $product->name ,
@@ -68,6 +70,7 @@ class AmazonReseller extends AbstractReseller {
             {
                 // I will update the product .
                 $updateArray =  [
+                    'category_id' => $product->category_id ,
                     'ref_type' => $product->ref_type ,
                     'ref_value' => $product->ref_value ,
                     'name' => $product->name ,
@@ -88,12 +91,10 @@ class AmazonReseller extends AbstractReseller {
                     $updateArray['data_changed_at'] =  $now;
                 $amazonModel::where('sku',$product->id)->update($updateArray);
             }
-            $i++ ;
-            if($i>50){ dd($product->toArray());}
         }
     }
 
-    protected function getPrice($product){
+    public static function getPrice($product,$backOffiece){
 
         $product->marge = self::getMarge($product);
         $product->comm = self::getCommission($product)/100;
@@ -101,20 +102,60 @@ class AmazonReseller extends AbstractReseller {
         $transport_invoiced_ht = self::get_transport_invoiced_ht(); // (0 pour le moment ) , ce que on va facturer pour gagner encore plus je pense
         $tva_general = self::$tva_general ;
         $product->purchase_price_ht     = $product->price_ht + $product->eco_tax / ( 1 + $tva_general ) ;
-        $product->selling_price_ht = ( $product->purchase_price_ht + $transport_cost_ht + $transport_invoiced_ht * ( 1 - $product->comm * ( 1 + $tva_general )) )
-                                        / ( 1 - $product->marge - $product->comm * (1 + $tva_general) ) ;
-        $product->price_ttc;
+        $product->numerator =  ( $product->purchase_price_ht + $transport_cost_ht + $transport_invoiced_ht * ( 1 - $product->comm * ( 1 + $tva_general )) ) ;
+        $product->denominator = ( 1 - $product->marge - $product->comm * (1 + $tva_general) ) ;
+        $product->selling_price_ht = $product->numerator / $product->denominator ;
+        $product->amazon_commission_ht = $product->selling_price_ht * $product->comm;
+        $product->amazon_commission_ttc = $product->selling_price_ht * $product->comm * (1 + $tva_general) ;
+        $product->cost_price_ht = $product->numerator +  $product->selling_price_ht * $product->comm * (1 + $tva_general)  ; //prix de revient
         $product->vat_rate_dicimal = $product->vat_rate /100 ;
         $product->selling_price_ttc = $product->selling_price_ht * (1 +  $product->vat_rate_dicimal );
+        $product->cost_price_ttc = $product->cost_price_ht * (1 +  $product->vat_rate_dicimal );
+        $product->tva_product = $product->vat_rate_dicimal ;
+        $product->tva_general = $tva_general;
         $transport_cost_ttc = $transport_cost_ht * (1 + $tva_general) ;
         $product->coeff =  ( $product->selling_price_ttc - $transport_cost_ttc ) /  $product->purchase_price_ht  ;
         //dd($product->toArray());
+        if($backOffiece){
+            return $product;
+        }
         return [$product->selling_price_ttc, $product->coeff];
     }
 
 
     private static function getMarge($product) {
         $product ;
+        //dd($product->category_id);
+        $arrayMarge = [
+                25 => 0.07,
+                24 => 0.07,
+                23 => 0.07,
+                22 => 0.07,
+                21 => 0.07,
+                20 => 0.07,
+                19 => 0.07,
+                18 => 0.07,
+                17 => 0.20, // PUERICULTURE (6
+                16 => 0.07,
+                15 => 0.07, // INFORMATIQUE (5
+                14 => 0.07,
+                13 => 0.07,
+                12 => 0.07,
+                11 => 0.07,
+                10 => 0.07,
+                9 => 0.07,
+                8 => 0.07,
+                7 => 0.15, // JOUET (NEW) (4
+                6 => 0.07,
+                5 => 0.07,
+                4 => 0.20, // Alcool   (1
+                3 => 0.07,
+                2 => 0.15, // BRICOLAGE - OUTILLAGE - QUINCAILLERIE (3
+                1 => 0.20, // DECO - LINGE - LUMINAIRE   (2
+    ];
+        if(isset($arrayMarge[$product->category_id])){
+            return $arrayMarge[$product->category_id] ;
+        }
         return self::$marge;
     }
 
@@ -126,6 +167,7 @@ class AmazonReseller extends AbstractReseller {
         +"valid_until": "2020-00-00 00:00:00"*/
         // for the moment , we have to consider the min info , the min commission by article .
 
+        //return 0; // pricing alya
         return $commissionInfo->percentage;
     }
 

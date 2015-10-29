@@ -19,7 +19,7 @@ class ActualiseProductsTable extends Command
      *
      * @var string
      */
-    protected $description = 'Command description.';
+    protected $description = 'Sends ( or update ) recent products from the supplier\'s products table to the product table(Create Sku if needed)';
 
     /**
      * Create a new command instance.

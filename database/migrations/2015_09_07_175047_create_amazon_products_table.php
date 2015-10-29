@@ -16,8 +16,10 @@ class CreateAmazonProductsTable extends Migration
             $table->unsignedInteger('sku');
             $table->primary('sku');
             $table->timestamps();
+            $table->string('asin',25)->nullable();
             $table->tinyInteger('existence')->default(0);
             $table->tinyInteger('locked');
+            $table->tinyInteger('category_id');
             $table->string('ref_type');
             $table->string('ref_value');
             $table->string('name',500);

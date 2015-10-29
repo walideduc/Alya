@@ -1,13 +1,15 @@
 <?php
-class AmazonMWS_Reports2014_ReportTypes_UnshippedOrdersReport extends ReportType {
+namespace App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
+use App\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
+class UnshippedOrdersReport extends ReportType {
 	// ex: reportId = 39941824364 , requestId = 9669031384
 	public $reportTypeEnumeration = '_GET_FLAT_FILE_ACTIONABLE_ORDER_DATA_' ;
 	public $countryCode ;
 	public $isScheduled = 0 ;
 	public $reportOptions = 'ShowSalesChannel=true' ;
 
-	function __construct($countryCode = 'fr') {
-		parent::__construct($countryCode);
+	function __construct() {
+		parent::__construct(__CLASS__);
 	}
 
 	public  function parseReport($reportContents){
