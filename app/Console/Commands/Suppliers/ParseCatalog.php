@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Suppliers;
+namespace alyya\Console\Commands\Suppliers;
 
 use Illuminate\Console\Command;
 

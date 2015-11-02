@@ -5,9 +5,13 @@
  * Date: 12/09/15
  * Time: 14:35
  */
-namespace App\Partners\Resellers\Resellers\Amazon;
+namespace alyya\Partners\Resellers\Resellers\Amazon;
 
 class AmazonConfig {
+
+    public static $development = true ;
+    public static $feedQueue = 'feeds' ;
+    public static $reportQueue = 'feeds' ;
 
     public static $countryCodes = array('fr');//,'de','uk','es','it','fba_fr');
     public static $marketplaceArray = array(

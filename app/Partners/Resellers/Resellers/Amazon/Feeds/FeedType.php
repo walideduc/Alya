@@ -5,8 +5,8 @@
  * Date: 09/09/15
  * Time: 19:21
  */
-namespace App\Partners\Resellers\Resellers\Amazon\Feeds ;
-use App\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds ;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
 
 abstract class FeedType {
 

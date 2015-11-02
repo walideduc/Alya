@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace alyya\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class CdiscountProCategory extends Model
     //
     public function CdiscountProCategories()
     {
-        return $this->belongsToMany('App\Models\Category');
+        return $this->belongsToMany('alyya\Models\Category');
     }
 }

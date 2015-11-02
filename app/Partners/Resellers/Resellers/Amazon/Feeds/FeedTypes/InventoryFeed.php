@@ -1,52 +1,35 @@
 <?php
-namespace App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
-use App\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
+use Illuminate\Support\Facades\DB;
 
 class InventoryFeed extends FeedType {
 	public $enumeration = '_POST_INVENTORY_AVAILABILITY_DATA_';
 	public $countryCode;
 	public $processingTimeEstimated = 15;
 
-	function __construct($countryCode = 'fr' ,$array = null) {
-		if (in_array($countryCode, self::$countryCodes,true)) {
-			if (!is_null($array)) {
-				if (isset($array[0]['SKU'],$array[0]['Quantity'])) {	//isset($array) && is_array($array) && !empty($array)
-					$this->countryCode = $countryCode;
-					$this->products = $array;
-				}
-				else {
-					unset($this->products);
-					die(" One of required informations is missed, check the fields in the sql query that generated the input array , also it might be the upper or lower case of your field's name ".',look at the class '.__CLASS__. ' in '.__FUNCTION__.' function at line '.__LINE__.'<br/>');
-				}
-			}
-			else {
-				$this->countryCode = $countryCode;// for the test of afterfeed I noticed that $this->countryCode have to be set first :)
-				$this->products = self::getData($countryCode);
-			}
-		}
-		else {
-			die(" This value <b>'.$countryCode.'</b>  of countryCode is unknown ".',look at the class '.__CLASS__. ' in '.__FUNCTION__.' function at line '.__LINE__.'<br/>');
-		}
-	}
+	function __construct() {
+    }
 
 
 	public function formatFeed(){
-		$products = isset($this->products) ? $this->products : self::getData($this->countryCode);
-		//die();
-		//return $products;
-		$nomberProducts = sizeof($products);
-		for ($i = 0; $i < $nomberProducts; $i++) {
-			$messageID = $i+1;
-			$messges .="
+        $products = isset($this->data) ? $this->data : $this->getData();
+        $messages = '';
+        $messageID = 1;
+        foreach ( $products as $product ){
+            $this->sku_sent[] = $product->sku ;
+            $messages .="
 						<Message>
 					        <MessageID>$messageID</MessageID>
 					        <OperationType>Update</OperationType>
 					        <Inventory>
-					            <SKU>".$products[$i]['SKU']."</SKU>
-					            <Quantity>".$products[$i]['Quantity']."</Quantity>	
+					            <SKU>".$product->sku."</SKU>
+					            <Quantity>".$product->quantity."</Quantity>
 						    </Inventory>
 					       </Message>";
-		}
+            ++$messageID;
+        }
 		$feed = <<<EOD
 <?xml version="1.0" encoding="UTF-8"?>
 				<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -56,15 +39,30 @@ class InventoryFeed extends FeedType {
         				<MerchantIdentifier>A1VNMKJF5SG27E</MerchantIdentifier>
     				</Header>
    					<MessageType>Inventory</MessageType>
-    				$messges
+    				$messages
 				</AmazonEnvelope>
 EOD;
     				return $feed;
 	}
 	public function getData(){
-
+        $table = self::getTableProductsName($this->countryCode);
+        if (AmazonConfig::$development){
+            $this->data = DB::table($table)->select('sku','quantity')->whereRaw(' stock_changed_at  > stock_submitted_at ' )->take(5)->get();
+        }else{
+            $this->data = DB::table($table)->select('sku','quantity')->whereRaw(' stock_changed_at  > stock_submitted_at ' )->get();
+        }
+        //dd($this->data);
+        if(empty($this->data) ){
+            return 0;
+        }
+        return 1;
 	}
 
 	public function afterFeed() {
+        //dd($this->sku_sent);
+        $table = self::getTableProductsName($this->countryCode);
+        DB::table($table)->whereIn('sku',$this->sku_sent)->update([
+            'stock_submitted_at' => \Carbon\Carbon::now()->toDateTimeString(),
+        ]);
 	}
 }

@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: alyya
+        psr4_prefix: alyya
         src_path: app

@@ -6,21 +6,22 @@
  * Time: 15:31
  */
 
-namespace App\Partners\Resellers\Resellers\Amazon;
+namespace alyya\Partners\Resellers\Resellers\Amazon;
 
 
-use App\Models\AmazonProduct;
-use App\Models\Product;
-use App\Partners\Resellers\AbstractReseller;
-use App\Partners\Resellers\Resellers\Amazon\Reports\Report;
+use alyya\Models\AmazonProduct;
+use alyya\Models\Product;
+use alyya\Partners\Resellers\AbstractReseller;
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\Report;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
-use App\Partners\Resellers\Resellers\Amazon\Feeds\Feed ;
+use alyya\Partners\Resellers\Resellers\Amazon\Feeds\Feed ;
 
 class AmazonReseller extends AbstractReseller {
 
-    protected $feeds ;
+    public $feed ;
+    public $report ;
 
     static $euroVersCentimes = 100;
     static $marge = 0.07 ; // 7%

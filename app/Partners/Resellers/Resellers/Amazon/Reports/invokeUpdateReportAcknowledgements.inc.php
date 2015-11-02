@@ -63,15 +63,17 @@ try {
 
 	echo("            ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
 } catch (MarketplaceWebService_Exception $ex) {
-    //dd($ex);
-	echo("Caught Exception: " . $ex->getMessage() . "\n");
-	echo("Response Status Code: " . $ex->getStatusCode() . "\n");
+
+/*	echo("Response Status Code: " . $ex->getStatusCode() . "\n");
 	echo("Error Code: " . $ex->getErrorCode() . "\n");
 	echo("Error Type: " . $ex->getErrorType() . "\n");
 	echo("Request ID: " . $ex->getRequestId() . "\n");
 	echo("XML: " . $ex->getXML() . "\n");
 	echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
-	$date = new DateTime();
-	
+	$date = new DateTime();*/
+
+    $job = ( new \alyya\Jobs\Resellers\Amazon\Reports\UpdateReportAcknowledgements($reportType,true) )->onQueue(self::$queuesCategory)->delay(900);
+    $this->dispatch($job);
+    dd("Caught Exception: " . $ex->getMessage() . "\n");
 	//task::push(__CLASS__, 'UpdateReportAcknowledgements',array($reportType,true),$date->format('Y-m-d H:i:s'),2);
 }

@@ -27,73 +27,53 @@
     <favorites_list name="kfina-market" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3808734">
+    <splitter split-orientation="horizontal" split-proportion="0.5961003">
       <split-first>
         <leaf>
-          <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <file leaf-file-name="Feed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/Feed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="2324">
-                  <caret line="14" column="24" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#7#392#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="3920">
-                  <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#40#99#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PricingTest.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Console/Commands/PricingTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1428">
-                  <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-                  <folding>
-                    <element signature="e#40#83#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="2576">
-                  <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+                <state vertical-scroll-proportion="-6.362069" vertical-offset="1227" max-vertical-offset="3108">
+                  <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/resources/views/product/show.blade.php">
+          <file leaf-file-name="OrderFulfillmentFeed.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/OrderFulfillmentFeed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1279" max-vertical-offset="2408">
-                  <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+                <state vertical-scroll-proportion="0.24561404" vertical-offset="0" max-vertical-offset="2184">
+                  <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
                   <folding>
-                    <marker date="1444219614543" expanded="true" signature="1380:1405" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="805:1433" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="884:1433" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="1164:1433" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="1549:1580" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="1549:1651" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="1549:1695" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="1989:2306" placeholder="..." />
+                    <marker date="1446473015365" expanded="true" signature="2076:2214" placeholder="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AmazonReseller.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonReseller.php">
+          <file leaf-file-name="ImageFeed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ImageFeed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="2296" max-vertical-offset="5964">
-                  <caret line="105" column="70" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="70" />
-                  <folding />
+                <state vertical-scroll-proportion="-1.037037" vertical-offset="532" max-vertical-offset="2352">
+                  <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#6#333#0#PHP" expanded="true" />
+                    <element signature="e#404#463#0#PHP" expanded="true" />
+                    <marker date="1446468519301" expanded="true" signature="1044:1158" placeholder="..." />
+                    <marker date="1446468519301" expanded="true" signature="1044:1382" placeholder="..." />
+                    <marker date="1446468519301" expanded="true" signature="1170:1295" placeholder="..." />
+                    <marker date="1446468519301" expanded="true" signature="1170:1362" placeholder="..." />
+                    <marker date="1446468519301" expanded="true" signature="1553:1866" placeholder="..." />
+                    <marker date="1446468519301" expanded="true" signature="1640:1778" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -101,38 +81,87 @@
           <file leaf-file-name="2015_09_07_175047_create_amazon_products_table.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/database/migrations/2015_09_07_175047_create_amazon_products_table.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1764">
-                  <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+                <state vertical-scroll-proportion="-8.962963" vertical-offset="1018" max-vertical-offset="1820">
+                  <caret line="46" column="102" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="102" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
+          <file leaf-file-name="DeleteProductFeed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/DeleteProductFeed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="-13.777778" vertical-offset="1252" max-vertical-offset="2100">
+                  <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#202#261#0#PHP" expanded="true" />
+                    <marker date="1446471116701" expanded="true" signature="948:1025" placeholder="..." />
+                    <marker date="1446471116701" expanded="true" signature="948:1159" placeholder="..." />
+                    <marker date="1446471116701" expanded="true" signature="1069:1139" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="KfinaServiceProvider.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Providers/KfinaServiceProvider.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-11.703704" vertical-offset="1644" max-vertical-offset="3276">
+                  <caret line="71" column="109" selection-start-line="71" selection-start-column="109" selection-end-line="71" selection-end-column="109" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CdiscountPro.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/CdiscountPro/CdiscountPro.php">
+          <file leaf-file-name="PricingFeed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/PricingFeed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="896" max-vertical-offset="5348">
-                  <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+                <state vertical-scroll-proportion="-1.037037" vertical-offset="1316" max-vertical-offset="2156">
+                  <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#77#136#0#PHP" expanded="true" />
+                    <marker date="1446470154353" expanded="true" signature="729:979" placeholder="..." />
+                    <marker date="1446470154353" expanded="true" signature="797:903" placeholder="..." />
+                    <marker date="1446470154353" expanded="true" signature="797:913" placeholder="..." />
+                    <marker date="1446470154353" expanded="true" signature="797:959" placeholder="..." />
+                    <marker date="1446470154353" expanded="true" signature="1149:1423" placeholder="..." />
+                    <marker date="1446470154353" expanded="true" signature="1218:1341" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="config.inc.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/config.inc.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-17.037037" vertical-offset="1164" max-vertical-offset="1792">
+                  <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="2015_10_21_183721_PixmaniaProProducts.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_21_183721_PixmaniaProProducts.php">
+          <file leaf-file-name="ProductFeed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="3.0220587" vertical-offset="354" max-vertical-offset="1540">
-                  <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+                <state vertical-scroll-proportion="-4.4310346" vertical-offset="1787" max-vertical-offset="3500">
+                  <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+                  <folding>
+                    <marker date="1446470454781" expanded="true" signature="865:1981" placeholder="..." />
+                    <marker date="1446470454781" expanded="true" signature="993:1961" placeholder="..." />
+                    <marker date="1446470454781" expanded="true" signature="1076:1231" placeholder="..." />
+                    <marker date="1446470454781" expanded="true" signature="1260:1488" placeholder="..." />
+                    <marker date="1446470454781" expanded="true" signature="1523:1937" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ScheduledXMLOrderReport.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-9.333333" vertical-offset="84" max-vertical-offset="4984">
+                  <caret line="12" column="43" selection-start-line="8" selection-start-column="25" selection-end-line="12" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
@@ -142,48 +171,60 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
+          <file leaf-file-name="RequestReport.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/RequestReport.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1521" max-vertical-offset="3920">
-                  <caret line="56" column="14" selection-start-line="33" selection-start-column="12" selection-end-line="56" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#40#99#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PixmaniaPro.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/PixmaniaPro/PixmaniaPro.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="3024">
-                  <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
-                  <folding>
-                    <element signature="e#143#188#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PixmaniaTest.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Console/Commands/PixmaniaTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1428">
-                  <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#40#71#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="2015_10_14_200339_pricing.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_14_200339_pricing.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="1540">
-                  <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="1792">
+                  <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UpdateReportAcknowledgements.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="1624">
+                  <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="invokeUpdateReportAcknowledgements.inc.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeUpdateReportAcknowledgements.inc.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-23.407408" vertical-offset="1440" max-vertical-offset="2352">
+                  <caret line="74" column="145" selection-start-line="74" selection-start-column="145" selection-end-line="74" selection-end-column="145" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SubmitFeed.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Feeds/SubmitFeed.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.4074075" vertical-offset="1084" max-vertical-offset="1932">
+                  <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#65#96#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="InventoryFeed.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/InventoryFeed.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.24561404" vertical-offset="336" max-vertical-offset="2044">
+                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="31" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#76#135#0#PHP" expanded="true" />
+                    <marker date="1446470334309" expanded="true" signature="714:990" placeholder="..." />
+                    <marker date="1446470334309" expanded="true" signature="837:861" placeholder="..." />
+                    <marker date="1446470334309" expanded="true" signature="837:912" placeholder="..." />
+                    <marker date="1446470334309" expanded="true" signature="837:967" placeholder="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -195,19 +236,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php" />
-        <option value="$PROJECT_DIR$/supervisor.conf" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportType/ScheduledXMLOrderReport.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportType/UnshippedOrdersReport.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Feeds/SubmitFeed.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportType/InventoryReport.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedType.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonConfig.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeRequestReport.inc.php" />
         <option value="$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Reports/GetReportRequestList.php" />
-        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
         <option value="$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Reports/GetReportList.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/GetReportList.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeGetReportList.inc.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeGetReportListToGetReportIdArray.inc.php" />
         <option value="$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Reports/GetReport.php" />
@@ -215,37 +245,48 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_09_16_195551_test_jobs.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/Suppliers/ActualiseProductsTable.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/UpdateCatalog.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/Feed.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/GetReport.php" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_09_19_184647_CreateAmazonInventory.php" />
         <option value="$PROJECT_DIR$/storage/inventory.txt" />
         <option value="$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeUpdateReportAcknowledgements.inc.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/InventoryReport.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/UnshippedOrdersReport.php" />
-        <option value="$PROJECT_DIR$/app/Providers/KfinaServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/RequestReport.php" />
         <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportType.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/Report.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductContoller.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/product/show.php" />
         <option value="$PROJECT_DIR$/resources/views/product/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/product/show.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_09_07_175047_create_amazon_products_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_14_200339_pricing.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/PricingTest.php" />
-        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonReseller.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/CdiscountPro/CdiscountPro.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/PixmaniaTest.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_21_183721_PixmaniaProProducts.php" />
         <option value="$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/PixmaniaPro/PixmaniaPro.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/GetReportList.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/Report.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeUpdateReportAcknowledgements.inc.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonReseller.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonConfig.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ImagesFeed.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ImageFeed.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_09_07_175047_create_amazon_products_table.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/PricingFeed.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/InventoryFeed.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php" />
+        <option value="$PROJECT_DIR$/app/Providers/KfinaServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/DeleteProductFeed.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/Feed.php" />
+        <option value="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/OrderFulfillmentFeed.php" />
       </list>
     </option>
   </component>
@@ -302,7 +343,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,29 +353,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,7 +367,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -358,7 +381,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -366,11 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Partners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Suppliers" />
+              <option name="myItemId" value="Providers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,67 +399,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Partners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Suppliers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Suppliers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PixmaniaPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Partners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Suppliers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Suppliers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CdiscountPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -458,7 +417,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -466,7 +425,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
+              <option name="myItemId" value="Partners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -476,7 +439,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kfina-market" />
+              <option name="myItemId" value="alyya" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -484,11 +447,91 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Console" />
+              <option name="myItemId" value="Partners" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Commands" />
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfina-market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alyya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Partners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kfina-market" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alyya" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Partners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resellers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Amazon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FeedTypes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -504,11 +547,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/views/product" />
       <recent name="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports" />
       <recent name="$PROJECT_DIR$/storage" />
-      <recent name="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportType" />
-      <recent name="$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Feeds" />
@@ -579,53 +622,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.64375" sideWeight="0.498618" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5591398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16041666" sideWeight="0.501382" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45208332" sideWeight="0.498618" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23880596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15257049" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20619127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.85" sideWeight="0.501382" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22395833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.615625" sideWeight="0.498618" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5591398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16041666" sideWeight="0.501382" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23880596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -650,82 +670,22 @@
           <url>file://$PROJECT_DIR$/database/migrations/2015_09_16_195551_test_jobs.php</url>
           <line>2</line>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php</url>
+          <line>80</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/InventoryFeed.php</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.62963" vertical-offset="1088" max-vertical-offset="1652">
-          <caret line="57" column="7" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1456">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1157" max-vertical-offset="1708">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1344">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Suppliers/ActualiseProductsTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="268" max-vertical-offset="1764">
-          <caret line="21" column="122" selection-start-line="21" selection-start-column="122" selection-end-line="21" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/AbstractReseller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/GetReportRequestList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2268431" vertical-offset="328" max-vertical-offset="1708">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeGetReportList.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5193799" vertical-offset="0" max-vertical-offset="2464">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Reports/GetReportRequestList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="896" max-vertical-offset="1568">
@@ -740,41 +700,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="933" max-vertical-offset="1680">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/inventory.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1983996">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/InventoryFeed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="2100">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/PricingFeed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2016">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2352" max-vertical-offset="3388">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="1983996">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -782,13 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1073" max-vertical-offset="1568">
           <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/KfinaServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.48" vertical-offset="0" max-vertical-offset="3024">
-          <caret line="77" column="107" selection-start-line="77" selection-start-column="107" selection-end-line="77" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -806,31 +731,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43578947" vertical-offset="185" max-vertical-offset="15036">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/UpdateCatalog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9431579" vertical-offset="252" max-vertical-offset="1736">
           <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeUpdateReportAcknowledgements.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62526315" vertical-offset="1383" max-vertical-offset="2296">
-          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/Feed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47157896" vertical-offset="1092" max-vertical-offset="3052">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -855,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/Report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="9016">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/InventoryReport.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="3248">
@@ -870,26 +767,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/catalogue_CdiscountPro.CSV">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="971012">
-          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="4984">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/RequestReport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65954196" vertical-offset="1052" max-vertical-offset="1792">
-          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="971012">
+          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -897,20 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5129771" vertical-offset="420" max-vertical-offset="5600">
           <caret line="36" column="63" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="896">
-          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/config.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93282443" vertical-offset="817" max-vertical-offset="1792">
-          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -925,17 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="2324">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,9 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1279" max-vertical-offset="2408">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
-          <folding>
-            <marker date="1444219614543" expanded="true" signature="1380:1405" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,45 +811,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_09_07_175047_create_amazon_products_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_21_183721_PixmaniaProProducts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1764">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="1540">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_14_200339_pricing.php">
+    <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/PixmaniaPro/PixmaniaPro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="1540">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="3024">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PricingTest.php">
+    <entry file="file://$PROJECT_DIR$/.env.example">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="1428">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonReseller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2296" max-vertical-offset="5964">
-          <caret line="105" column="70" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/CdiscountPro/CdiscountPro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="896" max-vertical-offset="5348">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="770">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1006,41 +840,281 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PixmaniaTest.php">
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PricingTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1428">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#71#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.35737705" vertical-offset="790" max-vertical-offset="1400">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1955" max-vertical-offset="3920">
-          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#99#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-5.185185" vertical-offset="1400" max-vertical-offset="3752">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/PixmaniaPro/PixmaniaPro.php">
+    <entry file="file://$PROJECT_DIR$/app/Partners/Suppliers/Suppliers/CdiscountPro/CdiscountPro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="3024">
-          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
-          <folding>
-            <element signature="e#143#188#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6247906" vertical-offset="4499" max-vertical-offset="5348">
+          <caret line="183" column="65" selection-start-line="183" selection-start-column="65" selection-end-line="183" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_21_183721_PixmaniaProProducts.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.0220587" vertical-offset="354" max-vertical-offset="1540">
-          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.86767167" vertical-offset="266" max-vertical-offset="1008">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14405361" vertical-offset="726" max-vertical-offset="1652">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.043956045" vertical-offset="0" max-vertical-offset="672">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/PixmaniaTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2540984" vertical-offset="495" max-vertical-offset="1428">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_14_200339_pricing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6409836" vertical-offset="533" max-vertical-offset="1540">
+          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Jobs/Resellers/Amazon/Feeds/TriggerOtherFeeds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1008">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11648" max-vertical-offset="21784">
+          <caret line="430" column="17" selection-start-line="430" selection-start-column="17" selection-end-line="430" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/GetReportList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="1652">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/RequestReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1439" max-vertical-offset="1792">
+          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Reports/UpdateReportAcknowledgements.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="1624">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/Report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7118" max-vertical-offset="8848">
+          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/invokeUpdateReportAcknowledgements.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.407408" vertical-offset="1440" max-vertical-offset="2352">
+          <caret line="74" column="145" selection-start-line="74" selection-start-column="145" selection-end-line="74" selection-end-column="145" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonReseller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9310344" vertical-offset="140" max-vertical-offset="5992">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/Resellers/Amazon/Feeds/SubmitFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4074075" vertical-offset="1084" max-vertical-offset="1932">
+          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+          <folding>
+            <element signature="e#65#96#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/AmazonConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.259259" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.037037" vertical-offset="1164" max-vertical-offset="1792">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="84" max-vertical-offset="4984">
+          <caret line="12" column="43" selection-start-line="8" selection-start-column="25" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/AmazonProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="542">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ImageFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.037037" vertical-offset="532" max-vertical-offset="2352">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#6#333#0#PHP" expanded="true" />
+            <element signature="e#404#463#0#PHP" expanded="true" />
+            <marker date="1446468519301" expanded="true" signature="1044:1158" placeholder="..." />
+            <marker date="1446468519301" expanded="true" signature="1044:1382" placeholder="..." />
+            <marker date="1446468519301" expanded="true" signature="1170:1295" placeholder="..." />
+            <marker date="1446468519301" expanded="true" signature="1170:1362" placeholder="..." />
+            <marker date="1446468519301" expanded="true" signature="1553:1866" placeholder="..." />
+            <marker date="1446468519301" expanded="true" signature="1640:1778" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_09_07_175047_create_amazon_products_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.962963" vertical-offset="1018" max-vertical-offset="1820">
+          <caret line="46" column="102" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/PricingFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.037037" vertical-offset="1316" max-vertical-offset="2156">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <element signature="e#77#136#0#PHP" expanded="true" />
+            <marker date="1446470154353" expanded="true" signature="729:979" placeholder="..." />
+            <marker date="1446470154353" expanded="true" signature="797:903" placeholder="..." />
+            <marker date="1446470154353" expanded="true" signature="797:913" placeholder="..." />
+            <marker date="1446470154353" expanded="true" signature="797:959" placeholder="..." />
+            <marker date="1446470154353" expanded="true" signature="1149:1423" placeholder="..." />
+            <marker date="1446470154353" expanded="true" signature="1218:1341" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/ProductFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4310346" vertical-offset="1787" max-vertical-offset="3500">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+          <folding>
+            <marker date="1446470454781" expanded="true" signature="865:1981" placeholder="..." />
+            <marker date="1446470454781" expanded="true" signature="993:1961" placeholder="..." />
+            <marker date="1446470454781" expanded="true" signature="1076:1231" placeholder="..." />
+            <marker date="1446470454781" expanded="true" signature="1260:1488" placeholder="..." />
+            <marker date="1446470454781" expanded="true" signature="1523:1937" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/KfinaServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.703704" vertical-offset="1644" max-vertical-offset="3276">
+          <caret line="71" column="109" selection-start-line="71" selection-start-column="109" selection-end-line="71" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/DeleteProductFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.777778" vertical-offset="1252" max-vertical-offset="2100">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#202#261#0#PHP" expanded="true" />
+            <marker date="1446471116701" expanded="true" signature="948:1025" placeholder="..." />
+            <marker date="1446471116701" expanded="true" signature="948:1159" placeholder="..." />
+            <marker date="1446471116701" expanded="true" signature="1069:1139" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/Feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.362069" vertical-offset="1227" max-vertical-offset="3108">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/InventoryFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24561404" vertical-offset="336" max-vertical-offset="2044">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#76#135#0#PHP" expanded="true" />
+            <marker date="1446470334309" expanded="true" signature="714:990" placeholder="..." />
+            <marker date="1446470334309" expanded="true" signature="837:861" placeholder="..." />
+            <marker date="1446470334309" expanded="true" signature="837:912" placeholder="..." />
+            <marker date="1446470334309" expanded="true" signature="837:967" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Partners/Resellers/Resellers/Amazon/Feeds/FeedTypes/OrderFulfillmentFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24561404" vertical-offset="0" max-vertical-offset="2184">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+          <folding>
+            <marker date="1446473015365" expanded="true" signature="805:1433" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="884:1433" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="1164:1433" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="1549:1580" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="1549:1651" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="1549:1695" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="1989:2306" placeholder="..." />
+            <marker date="1446473015365" expanded="true" signature="2076:2214" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

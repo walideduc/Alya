@@ -6,9 +6,9 @@
  * Time: 19:18
  */
 
-namespace App\Partners\Resellers\Resellers\Amazon\Feeds ;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds ;
 
-use App\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
 use Illuminate\Foundation\Bus\DispatchesJobs ;
 
 require_once(dirname(__FILE__). '/../config.inc.php');
@@ -43,12 +43,12 @@ class Feed {
         );
         rewind($feedHandle);
         $request = new \MarketplaceWebService_Model_SubmitFeedRequest($parameters);
-         //dd($request);
+        //dd($request);
 
         /********* End creation the request Block *********/
         $service = self::setServiceClient();
         $submissionId = $this->invokeSubmitFeed($service, $request);
-        debug_kfina($submissionId);
+        //dd($submissionId);
         if (isset($submissionId)) { // the feed was well sent :)
             $feedType->afterFeed(); // I will do what needed after the feed was sent
             ## I program the GetFeedSubmissionList job
@@ -58,18 +58,21 @@ class Feed {
             $parametersFeed->countryCode  = $feedType->countryCode;
             $parametersFeed->class  = get_class($feedType);
             $seconds = $feedType->getProcessingTimeEstimated() * 60 ;
-            $job = (new \App\Jobs\Resellers\Amazon\Feeds\GetFeedSubmissionList($parametersFeed))->onQueue(self::$queuesCategory)->delay($seconds);
+            $job = (new \alyya\Jobs\Resellers\Amazon\Feeds\GetFeedSubmissionList($parametersFeed))->onQueue(self::$queuesCategory)->delay($seconds);
             //var_dump(app('Illuminate\Contracts\Bus\Dispatcher'));
-
             $this->dispatch($job);
             return $submissionId;
         }
     }
 
     private function invokeSubmitFeed(\MarketplaceWebService_Interface $service, $request){
-        //require 'invokeSubmitFeed.inc.php';
-        //return $submissionId;
-        return '123456789';
+        if(AmazonConfig::$development){
+            return '123456789';
+        }else{
+            require 'invokeSubmitFeed.inc.php';
+            return $submissionId;
+        }
+
     }
 
     public static function GetFeedSubmissionList($parametersFeed) {

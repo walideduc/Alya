@@ -1,6 +1,6 @@
 <?php
-namespace App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
-use App\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
 class UnshippedOrdersReport extends ReportType {
 	// ex: reportId = 39941824364 , requestId = 9669031384
 	public $reportTypeEnumeration = '_GET_FLAT_FILE_ACTIONABLE_ORDER_DATA_' ;

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands;
+namespace alyya\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Partners\Suppliers\Suppliers\PixmaniaPro\PixmaniaPro;
+use alyya\Partners\Suppliers\Suppliers\PixmaniaPro\PixmaniaPro;
 
 class PixmaniaTest extends Command
 {

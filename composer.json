@@ -21,7 +21,7 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "alyya\\": "app/"
         }
     },
     "autoload-dev": {

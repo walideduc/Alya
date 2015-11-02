@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console;
+namespace alyya\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -14,20 +14,20 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Console\Commands\Inspire::class,
-        \App\Console\Commands\LogDemo::class,
-        \App\Console\Commands\Suppliers\GetCatalog::class,
-        \App\Console\Commands\Suppliers\ParseCatalog::class,
-        \App\Console\Commands\Suppliers\ActualiseProductsTable::class,
-        \App\Console\Commands\Resellers\UpdateCatalog::class,
-        \App\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
-        \App\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
-        \App\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
-        \App\Console\Commands\Resellers\Amazon\Reports\GetReportList::class,
-        \App\Console\Commands\Resellers\Amazon\Reports\GetReport::class,
-        \App\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
-        \App\Console\Commands\PricingTest::class,
-        \App\Console\Commands\PixmaniaTest::class,
+        \alyya\Console\Commands\Inspire::class,
+        \alyya\Console\Commands\LogDemo::class,
+        \alyya\Console\Commands\Suppliers\GetCatalog::class,
+        \alyya\Console\Commands\Suppliers\ParseCatalog::class,
+        \alyya\Console\Commands\Suppliers\ActualiseProductsTable::class,
+        \alyya\Console\Commands\Resellers\UpdateCatalog::class,
+        \alyya\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
+        \alyya\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
+        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
+        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReportList::class,
+        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReport::class,
+        \alyya\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
+        \alyya\Console\Commands\PricingTest::class,
+        \alyya\Console\Commands\PixmaniaTest::class,
 
     ];
 

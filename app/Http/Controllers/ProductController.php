@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace alyya\Http\Controllers;
 
-use App\Partners\Resellers\Resellers\Amazon\AmazonReseller;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonReseller;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Models\Product;
+use alyya\Http\Requests;
+use alyya\Http\Controllers\Controller;
+use alyya\Models\Product;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller

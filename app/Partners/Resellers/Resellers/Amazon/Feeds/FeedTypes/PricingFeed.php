@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
-use App\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
+use Illuminate\Support\Facades\DB;
 
 class PricingFeed extends FeedType {
 	public $enumeration = '_POST_PRODUCT_PRICING_DATA_';
@@ -12,20 +14,22 @@ class PricingFeed extends FeedType {
 	}
 
 	public function formatFeed(){
-		$products = isset($this->products) ? $this->products : self::getData($this->countryCode);
-		$nomberProducts = sizeof($products);
-		for ($i = 0; $i < $nomberProducts; $i++) {
-			$price = $products[$i]['StandardPrice_currency'];
-			$messageID = $i+1;
-			$messges .="
+        $products = isset($this->data) ? $this->data : $this->getData();
+        $messages = '';
+        $messageID = 1;
+        //dd($this->data);
+        foreach ( $products as $product ){
+            $this->sku_sent[] = $product->sku ;
+            $messages .="
 						<Message>
 					        <MessageID>$messageID</MessageID>
 					        <Price>
-						        <SKU>".$products[$i]['SKU']."</SKU>
-						        <StandardPrice currency=\"$price\">".$products[$i]['StandardPrice']."</StandardPrice>					        
-					        </Price>    
+						        <SKU>".$product->sku."</SKU>
+						        <StandardPrice currency=\"$product->currency\">".$product->price."</StandardPrice>
+					        </Price>
 					    </Message>";
-		}
+            ++$messageID;
+        }
 		$feed = <<<EOD
 <?xml version="1.0" encoding="UTF-8"?>
 					<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -36,7 +40,7 @@ class PricingFeed extends FeedType {
 					</Header>
 					
 					<MessageType>Price</MessageType>
-					$messges
+					$messages
 					</AmazonEnvelope>
 EOD;
 					return $feed;
@@ -44,24 +48,25 @@ EOD;
 	
 	
 	public function getData(){
-		$table = self::getTableNameFromCountryCode($countryCode);
-		$what	= '`SKU` ,  `StandardPrice` , `StandardPrice_currency` ';
-		$where	= " t_price_changed > t_price_submitted AND StandardPrice  != 0 AND price_lock = 0 LIMIT 20000 ";
-		//echo ' $table  === '.$table,' $what  === '.$what,' $where  === '.$where;
-		$products = AmazonMWS_Feeds_Feeds::getProducts($table ,$what , $where);
-		return $products;
+        $table = self::getTableProductsName($this->countryCode);
+        if (AmazonConfig::$development){
+            $this->data = DB::table($table)->select('sku','price','currency')->whereRaw(' price_changed_at  > price_submitted_at ' )->take(5)->get();
+        }else{
+            $this->data = DB::table($table)->select('sku','price','currency')->whereRaw(' price_changed_at  > price_submitted_at ' )->get();
+        }
+        //dd($this->data);
+
+        if(empty($this->data) ){
+            return 0;
+        }
+        return 1;
 	}
 
 	public function afterFeed(){
-		$table = self::getTableNameFromCountryCode($this->countryCode);
-		foreach ($this->products as $product) {
-			$products_sku[] = $product['SKU'];
-		}
-		$date = new DateTime();
-		$now = $date->format('Y-m-d H:i:s');
-		$where = "SKU IN ('".implode("','", $products_sku)."')" ;
-		$sql = " UPDATE `$table` SET  `t_price_submitted` =  '$now' WHERE ".$where ;
-		db::query($sql);
+        $table = self::getTableProductsName($this->countryCode);
+        DB::table($table)->whereIn('sku',$this->sku_sent)->update([
+            'price_submitted_at' => \Carbon\Carbon::now()->toDateTimeString(),
+        ]);
 	}
 
 }

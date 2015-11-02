@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace alyya\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +13,7 @@ class Product extends Model
     static $deniedCategoriesInAmazon = [1,2,5,9,8,4,3];
     //
     public function supplier(){
-        return $this->belongsTo('App\Models\Supplier');
+        return $this->belongsTo('alyya\Models\Supplier');
     }
     public function scopeUpdateAmazonCatalog($query){
         return $query->where('updated_at', '>', Carbon::now()->subDay()->toDateTimeString())->whereNotIn('category_id',self::$deniedCategoriesInAmazon);

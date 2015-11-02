@@ -6,9 +6,9 @@
  * Time: 19:24
  */
 
-namespace App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
-use App\Partners\Resellers\Resellers\Amazon\AmazonConfig;
-use App\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedType ;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +18,7 @@ class ProductFeed extends FeedType {
     public $enumeration = '_POST_PRODUCT_DATA_';
     public $countryCode;
     public $processingTimeEstimated = 30;
-    static $queuesCategory = 'feeds' ;
+
 
     function __construct() {
     }
@@ -26,11 +26,9 @@ class ProductFeed extends FeedType {
     public function formatFeed(){
         $products = isset($this->data) ? $this->data : $this->getData();
         $messages = '';
-        $i = 0;
+        $messageID = 1;
         foreach ( $products as $product ){
             $this->sku_sent[] = $product->sku ;
-            //dd($product);
-            $messageID = $i+1;
             $messages .="
 						<Message>
 					        <MessageID>$messageID</MessageID>
@@ -53,6 +51,7 @@ class ProductFeed extends FeedType {
             					</DescriptionData>
 					        </Product>
 					    </Message>';
+            ++$messageID;
         }
         $merchantIdentifier = AmazonConfig::getMerchantIdentifier($this->countryCode);
         $feed = <<<EOD
@@ -73,7 +72,12 @@ EOD;
 
     public function getData(){
         $table = self::getTableProductsName($this->countryCode);
-        $this->data = DB::table($table)->whereRaw(' data_changed_at  > data_submitted_at ' )->take(1)->get();
+        if (AmazonConfig::$development){
+            $this->data = DB::table($table)->select('sku','ref_type','ref_value','ref_type','condition_type','condition_note','name','brand','description','manufacturer')->whereRaw(' data_changed_at  > data_submitted_at ' )->take(5)->get();
+        }else{
+            $this->data = DB::table($table)->select('sku','ref_type','ref_value','ref_type','condition_type','condition_note','name','brand','description','manufacturer')->whereRaw(' data_changed_at  > data_submitted_at ' )->get();
+        }
+        dd($this->data);
         if(empty($this->data) ){
             return 0;
         }
@@ -95,7 +99,7 @@ EOD;
         ]);
 
         $seconds = ($this->getProcessingTimeEstimated()+30) * 60 ;// For waiting that the creation failed in the table be set by the rest of the feeds functions
-        $job = (new \App\Jobs\Resellers\Amazon\Feeds\TriggerOtherFeeds($this->countryCode))->onQueue(self::$queuesCategory)->delay($seconds);
+        $job = (new \alyya\Jobs\Resellers\Amazon\Feeds\TriggerOtherFeeds($this->countryCode))->onQueue(AmazonConfig::$feedQueue)->delay($seconds);
         $this->dispatch($job);
 
 

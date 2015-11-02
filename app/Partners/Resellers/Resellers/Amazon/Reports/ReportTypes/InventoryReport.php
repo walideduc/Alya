@@ -1,6 +1,6 @@
 <?php
-namespace App\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
-use App\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes;
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\ReportType;
 use Illuminate\Support\Facades\DB;
 
 class InventoryReport extends ReportType {

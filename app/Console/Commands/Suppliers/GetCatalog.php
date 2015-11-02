@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands\Suppliers;
+namespace alyya\Console\Commands\Suppliers;
 
 use Illuminate\Console\Command;
-use App\Partners\Suppliers\AbstractSupplier;
+use alyya\Partners\Suppliers\AbstractSupplier;
 use PhpSpec\Console\Application;
 
 class GetCatalog extends Command

@@ -6,8 +6,8 @@
  * Time: 16:49
  */
 
-namespace App\Partners\Suppliers\Suppliers\PixmaniaPro;
-use App\Partners\Suppliers\AbstractSupplier ;
+namespace alyya\Partners\Suppliers\Suppliers\PixmaniaPro;
+use alyya\Partners\Suppliers\AbstractSupplier ;
 use Illuminate\Support\Facades\DB;
 
 class PixmaniaPro extends AbstractSupplier {

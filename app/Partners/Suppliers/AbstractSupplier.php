@@ -5,7 +5,7 @@
  * Date: 27/08/15
  * Time: 15:39
  */
-namespace  App\Partners\Suppliers;
+namespace  alyya\Partners\Suppliers;
 class AbstractSupplier {
 
     public function ftp_open()

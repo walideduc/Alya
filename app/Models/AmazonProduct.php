@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace alyya\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

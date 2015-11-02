@@ -6,9 +6,9 @@
  * Time: 13:37
  */
 
-namespace App\Partners\Resellers\Resellers\Amazon\Reports;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Reports;
 
-use App\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
@@ -21,6 +21,7 @@ class Report {
     public function requestReport(ReportType $reportType, $startDate = null , $endDate = null ) { //If a report accepts ReportOptions, they will be described in the description of the report in the ReportType enumeration section.Unshipped Orders Report ReportOptions=ShowSalesChannel%3Dtrue
         // $ReportType is created with a good $countryCode ( The verifecation is done in the constrctor of $ReportType )
         // $ReportType contient countryCode, ReportEnumeration , et ReportOptions s'il y en a pour le rapport  .
+        //dd('fuck');
         $service = self::setServiceClient();
         if ( ( $countryCode = $reportType->countryCode ) != 'all') { // without parenthesis $countryCode = 1 when $ReportType->countryCode  != 'all' .... holy shit :)
             $marketplace = AmazonConfig::$marketplaceArray[$countryCode];
@@ -48,13 +49,14 @@ class Report {
         }
         //dd(__FILE__.' line '.__LINE__);
         $reportType->reportRequestId = $this->invokeRequestReport($service, $request);
+        //dd($reportType);
         if (isset($reportType->reportRequestId)) {
             // Program a GetReportRequestList job delay 15 mn , This job execute a command ;)
             $reflect = new \ReflectionClass($reportType);
             $reportType->shortName = $reflect->getShortName() ;
             $seconds = 1*60 ;
-            dd($reportType);
-            $job = (New \App\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
+            //dd($reportType);
+            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
             $this->dispatch($job);
             return 1;
         }else {
@@ -90,13 +92,13 @@ class Report {
             if ($reportProcessingStatus === '_DONE_') {
                 // program a GetReportList job because the report is ready . Delay or not as you like man
                 //$seconds = 15*60 ;
-                $job = (New \App\Jobs\Resellers\Amazon\Reports\GetReportList($reportType))->onQueue(self::$queuesCategory);
+                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportList($reportType))->onQueue(self::$queuesCategory);
                 $this->dispatch($job);
                 return 1;
             }elseif ($reportProcessingStatus === '_IN_PROGRESS_' || $reportProcessingStatus === '_SUBMITTED_') {
                 // program a GetReportRequestList job again because the report is not yet ready with delay of 15 min.
                 $seconds = 15*60 ;
-                $job = (New \App\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
+                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
                 $this->dispatch($job);
                 return 0;
             }else {
@@ -138,14 +140,14 @@ class Report {
             $reportType->reportId = self::invokeGetReportListToGetReportId($service, $request , $reportType );
             dd($reportType);
             // program a job of GetReport , do I need a job for this ?
-            $job = (New \App\Jobs\Resellers\Amazon\Reports\GetReport($reportType))->onQueue(self::$queuesCategory)->delay(5*60);
+            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReport($reportType))->onQueue(self::$queuesCategory)->delay(5*60);
             $this->dispatch($job);
             /*
              * A structured list of ReportRequestId values.
              * If you pass in ReportRequestId values, other query conditions are ignored.
              */
             return 1 ;
-        }else {
+        }else { // for the Scheduled report like  alyya/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport
 
             if (!isset($reportRequestId)) {
                 $parameters = array (
@@ -222,10 +224,10 @@ class Report {
         $parsed = $reportType->parseReport($reportContents);
         dd($parsed);
         if ($parsed === True ) {
-            $job = ( new \App\Jobs\Resellers\Amazon\Reports\UpdateReportAcknowledgements($reportType,true) )->onQueue(self::$queuesCategory)->delay(180);
+            $job = ( new \alyya\Jobs\Resellers\Amazon\Reports\UpdateReportAcknowledgements($reportType,true) )->onQueue(self::$queuesCategory)->delay(180);
             $this->dispatch($job);
         }
-        ################################ for testing ###############################################################
+        ################################ end for testing ###############################################################
 
 
 

@@ -46,7 +46,7 @@ Route::get('/updateCatalog', function () {
 });
 
 Route::get('/submitFeed', function () {
-    //return \App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+    //return \alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
   $exitCode = Artisan::call('amazon:submitFeed', [
         'feedType' => 'ProductFeed',
         'countryCode'=>'fr'
@@ -56,7 +56,7 @@ Route::get('/submitFeed', function () {
 
 Route::get('/getReport', function () {
     ini_set('max_execution_time', 300);
-    //return \App\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+    //return \alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
     $exitCode = Artisan::call('amazon:getReport', [
         'shortName' => 'InventoryReport',
         'reportId' => 987654321 ,

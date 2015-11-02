@@ -140,11 +140,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        alyya\Providers\AppServiceProvider::class,
+        alyya\Providers\EventServiceProvider::class,
+        alyya\Providers\RouteServiceProvider::class,
 
-        App\Providers\KfinaServiceProvider::class,
+        alyya\Providers\KfinaServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class, // laravel-debugbar
 
 

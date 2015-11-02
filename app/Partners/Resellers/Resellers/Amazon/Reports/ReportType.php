@@ -6,10 +6,10 @@
  * Time: 13:47
  */
 
-namespace App\Partners\Resellers\Resellers\Amazon\Reports;
+namespace alyya\Partners\Resellers\Resellers\Amazon\Reports;
 
 
-use App\Partners\Resellers\Resellers\Amazon\AmazonConfig;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
 
 abstract class ReportType {
 

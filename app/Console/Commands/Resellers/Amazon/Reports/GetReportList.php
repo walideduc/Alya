@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console\Commands\Resellers\Amazon\Reports;
+namespace alyya\Console\Commands\Resellers\Amazon\Reports;
 
-use App\Partners\Resellers\Resellers\Amazon\Reports\Report;
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\Report;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 
@@ -46,10 +46,10 @@ class GetReportList extends Command
     {
         $argument = $this->argument();
         $reportType = App::make($argument['shortName']);
-        debug_kfina($reportType);
+        //debug_kfina($reportType);
         $reportType->reportRequestId = $argument['reportRequestId'];
         $reportType->countryCode = $argument['countryCode'] ;
         $this->report->getReportList($reportType);
-        dd($reportType);
+        //dd($reportType);
     }
 }

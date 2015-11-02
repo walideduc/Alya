@@ -31,6 +31,7 @@ class CreateAmazonProductsTable extends Migration
             $table->string('condition_type')->default('New');
             $table->unsignedInteger('quantity');
             $table->float('price');
+            $table->string('currency',3)->default('EUR');
             $table->float('coefficient');
             $table->float('price_ttc_supplier');
             $table->string('image_url');
@@ -43,6 +44,7 @@ class CreateAmazonProductsTable extends Migration
             $table->dateTime('stock_submitted_at');
             $table->dateTime('image_changed_at');
             $table->dateTime('image_submitted_at');
+            $table->unsignedTinyInteger('to_delete')->default(0)->comment('1 to delete , 2 is deleted ');
         });
     }
 

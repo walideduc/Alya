@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Jobs\Resellers\Amazon\Reports;
+namespace alyya\Jobs\Resellers\Amazon\Reports;
 
-use App\Jobs\Job;
+use alyya\Jobs\Job;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;

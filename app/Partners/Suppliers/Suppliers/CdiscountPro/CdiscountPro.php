@@ -5,11 +5,11 @@
  * Date: 27/08/15
  * Time: 16:29
  */
-namespace App\Partners\Suppliers\Suppliers\CdiscountPro;
-use App\Models\CdiscountProCategory;
-use App\Models\CdiscountProProduct;
-use App\Models\Product;
-use App\Partners\Suppliers\AbstractSupplier ;
+namespace alyya\Partners\Suppliers\Suppliers\CdiscountPro;
+use alyya\Models\CdiscountProCategory;
+use alyya\Models\CdiscountProProduct;
+use alyya\Models\Product;
+use alyya\Partners\Suppliers\AbstractSupplier ;
 use Psy\Exception\ErrorException;
 
 class CdiscountPro extends AbstractSupplier  {

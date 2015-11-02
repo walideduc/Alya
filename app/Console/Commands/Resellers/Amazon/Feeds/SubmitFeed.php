@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands\Resellers\Amazon\Feeds;
+namespace alyya\Console\Commands\Resellers\Amazon\Feeds;
 
 use Illuminate\Console\Command;
-use App\Partners\Resellers\Resellers\Amazon\AmazonReseller;
+use alyya\Partners\Resellers\Resellers\Amazon\AmazonReseller;
 use Illuminate\Support\Facades\App;
 
 class SubmitFeed extends Command
