@@ -22,6 +22,7 @@ class AmazonReseller extends AbstractReseller {
 
     public $feed ;
     public $report ;
+    public $product;
 
     static $euroVersCentimes = 100;
     static $marge = 0.07 ; // 7%
@@ -32,9 +33,10 @@ class AmazonReseller extends AbstractReseller {
     static $transport_invoiced_ht = 0 ;  // 0 pour le moment
 
 
-    public function __construct(Feed $feed,Report $report){
+    public function __construct(Feed $feed,Report $report,Product $product){
         $this->feed = $feed;
         $this->report = $report ;
+        $this->product = $product ;
     }
 
     public function updateCatalog(){

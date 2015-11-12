@@ -2,7 +2,8 @@
 
 namespace alyya\Console\Commands\Resellers\Amazon\Reports;
 
-use alyya\Partners\Resellers\Resellers\Amazon\AmazonReseller;
+
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\Report;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 
@@ -30,9 +31,9 @@ class UpdateReportAcknowledgements extends Command
      *
      * @return void
      */
-    public function __construct(AmazonReseller $amazonReseller)
+    public function __construct(Report $report)
     {
-        $this->amazonReseller = $amazonReseller ;
+        $this->report = $report ;
         parent::__construct();
     }
 
@@ -47,7 +48,7 @@ class UpdateReportAcknowledgements extends Command
         $reportType = App::make($argument['shortName']);
         $reportType->reportId = $argument['reportId'];
         $acknowledged = $argument['acknowledged'];
-        $this->amazonReseller->report->updateReportAcknowledgements($reportType,$acknowledged);
+        $this->report->updateReportAcknowledgements($reportType,$acknowledged);
         //dd($reportType);
         //
     }

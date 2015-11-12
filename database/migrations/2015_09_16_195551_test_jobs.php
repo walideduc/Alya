@@ -14,8 +14,10 @@ class TestJobs extends Migration
     {
         Schema::create('test_jobs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('function');
-            $table->string('file');
+            $table->string('note_1');
+            $table->string('note_2');
+            $table->timestamp('inserted_at')->default(\Illuminate\Support\Facades\DB::raw('CURRENT_TIMESTAMP'));
+
         });
     }
 
@@ -26,6 +28,6 @@ class TestJobs extends Migration
      */
     public function down()
     {
-        Schema::drop('test_jobs');
+        //Schema::drop('test_jobs');
     }
 }

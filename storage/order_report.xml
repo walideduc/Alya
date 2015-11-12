@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+    <Header>
+        <DocumentVersion>1.01</DocumentVersion>
+        <MerchantIdentifier>M_JOUETSENFO_9296636</MerchantIdentifier>
+    </Header>
+    <MessageType>OrderReport</MessageType>
+    <Message>
+        <MessageID>1</MessageID>
+        <OrderReport>
+            <AmazonOrderID>403-3308636-0405963</AmazonOrderID>
+            <AmazonSessionID>403-3308636-0405963</AmazonSessionID>
+            <OrderDate>2014-02-07T09:03:07+00:00</OrderDate>
+            <OrderPostedDate>2014-02-07T09:03:07+00:00</OrderPostedDate>
+            <BillingData>
+                <BuyerEmailAddress>j7cwdjf2frrh9gl@marketplace.amazon.fr</BuyerEmailAddress>
+                <BuyerName>LE MEUR LOUIS</BuyerName>
+                <BuyerPhoneNumber>062401677</BuyerPhoneNumber>
+                <Address>
+                    <Name>LE MEUR LOUIS</Name>
+                    <AddressFieldOne>119 AV PHILIPPE AUGUSTE</AddressFieldOne>
+                    <City>PARIS</City>
+                    <PostalCode>75011</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>062401677</PhoneNumber>
+                </Address>
+            </BillingData>
+            <FulfillmentData>
+                <FulfillmentMethod>Ship</FulfillmentMethod>
+                <FulfillmentServiceLevel>Standard</FulfillmentServiceLevel>
+                <Address>
+                    <Name>LE MEUR LOUIS</Name>
+                    <AddressFieldOne>119 AV PHILIPPE AUGUSTE</AddressFieldOne>
+                    <City>PARIS</City>
+                    <PostalCode>75011</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>062401677</PhoneNumber>
+                </Address>
+            </FulfillmentData>
+            <Item>
+                <AmazonOrderItemCode>00316817980691</AmazonOrderItemCode>
+                <SKU>4379</SKU>
+                <Title>Papo - 55004 - Animaux  - Parasaurolophus</Title>
+                <Quantity>1</Quantity>
+                <ProductTaxCode>PTC_PRODUCT_TAXABLE_A</ProductTaxCode>
+                <ItemPrice>
+                    <Component>
+                        <Type>Principal</Type>
+                        <Amount currency="EUR">16.83</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Shipping</Type>
+                        <Amount currency="EUR">3.90</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Tax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>ShippingTax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                </ItemPrice>
+                <ItemFees>
+                    <Fee>
+                        <Type>Commission</Type>
+                        <Amount currency="EUR">-3.11</Amount>
+                    </Fee>
+                </ItemFees>
+            </Item>
+        </OrderReport>
+    </Message>
+    <Message>
+        <MessageID>2</MessageID>
+        <OrderReport>
+            <AmazonOrderID>171-0533954-4082735</AmazonOrderID>
+            <AmazonSessionID>171-0533954-4082735</AmazonSessionID>
+            <OrderDate>2014-02-07T08:57:19+00:00</OrderDate>
+            <OrderPostedDate>2014-02-07T08:57:19+00:00</OrderPostedDate>
+            <BillingData>
+                <BuyerEmailAddress>zcs9yrszcjj6bp5@marketplace.amazon.fr</BuyerEmailAddress>
+                <BuyerName>Elsa CORTES</BuyerName>
+                <BuyerPhoneNumber>0534501515</BuyerPhoneNumber>
+                <Address>
+                    <Name>Elsa CORTES</Name>
+                    <AddressFieldOne>27 AVENUE MARCEL DASSAULT</AddressFieldOne>
+                    <City>toulouse</City>
+                    <PostalCode>31500</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>0534501515</PhoneNumber>
+                </Address>
+            </BillingData>
+            <FulfillmentData>
+                <FulfillmentMethod>Ship</FulfillmentMethod>
+                <FulfillmentServiceLevel>Standard</FulfillmentServiceLevel>
+                <Address>
+                    <Name>Elsa CORTES</Name>
+                    <AddressFieldOne>27 AVENUE MARCEL DASSAULT</AddressFieldOne>
+                    <City>toulouse</City>
+                    <PostalCode>31500</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>0534501515</PhoneNumber>
+                </Address>
+            </FulfillmentData>
+            <Item>
+                <AmazonOrderItemCode>34088669157635</AmazonOrderItemCode>
+                <SKU>147896</SKU>
+                <Title>Vilac - 8625 - Jeu de Plein Air - Tente d'Indien - Nathalie Lété</Title>
+                <Quantity>1</Quantity>
+                <ProductTaxCode>PTC_PRODUCT_TAXABLE_A</ProductTaxCode>
+                <ItemPrice>
+                    <Component>
+                        <Type>Principal</Type>
+                        <Amount currency="EUR">124.52</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Shipping</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Tax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>ShippingTax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                </ItemPrice>
+                <ItemFees>
+                    <Fee>
+                        <Type>Commission</Type>
+                        <Amount currency="EUR">-18.68</Amount>
+                    </Fee>
+                </ItemFees>
+            </Item>
+        </OrderReport>
+    </Message>
+    <Message>
+        <MessageID>3</MessageID>
+        <OrderReport>
+            <AmazonOrderID>402-0746320-1325155</AmazonOrderID>
+            <AmazonSessionID>402-0746320-1325155</AmazonSessionID>
+            <OrderDate>2014-02-07T09:08:29+00:00</OrderDate>
+            <OrderPostedDate>2014-02-07T09:08:29+00:00</OrderPostedDate>
+            <BillingData>
+                <BuyerEmailAddress>kt7cj8kmddrm3h0@marketplace.amazon.fr</BuyerEmailAddress>
+                <BuyerName>Nicoli Christian</BuyerName>
+                <BuyerPhoneNumber>0683665923</BuyerPhoneNumber>
+                <Address>
+                    <Name>Nicoli Christian</Name>
+                    <AddressFieldOne>86 Avenue Pasteur</AddressFieldOne>
+                    <City>Lambersart</City>
+                    <PostalCode>59130</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>0683665923</PhoneNumber>
+                </Address>
+            </BillingData>
+            <FulfillmentData>
+                <FulfillmentMethod>Ship</FulfillmentMethod>
+                <FulfillmentServiceLevel>Standard</FulfillmentServiceLevel>
+                <Address>
+                    <Name>Christophe PADERN</Name>
+                    <AddressFieldOne>7 Route d'Alenya</AddressFieldOne>
+                    <City>THEZA</City>
+                    <PostalCode>66200</PostalCode>
+                    <CountryCode>FR</CountryCode>
+                    <PhoneNumber>0608358278</PhoneNumber>
+                </Address>
+            </FulfillmentData>
+            <Item>
+                <AmazonOrderItemCode>61688803923675</AmazonOrderItemCode>
+                <SKU>207070</SKU>
+                <Title>Canal Toys - 06021 - Bijou et Cosmétique - Monster High - Frankie Tatoos</Title>
+                <Quantity>1</Quantity>
+                <ProductTaxCode>PTC_PRODUCT_TAXABLE_A</ProductTaxCode>
+                <ItemPrice>
+                    <Component>
+                        <Type>Principal</Type>
+                        <Amount currency="EUR">32.17</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Shipping</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Tax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>ShippingTax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                </ItemPrice>
+                <ItemFees>
+                    <Fee>
+                        <Type>Commission</Type>
+                        <Amount currency="EUR">-4.83</Amount>
+                    </Fee>
+                </ItemFees>
+            </Item>
+        </OrderReport>
+    </Message>
+    <Message>
+        <MessageID>4</MessageID>
+        <OrderReport>
+            <AmazonOrderID>403-5402395-8085901</AmazonOrderID>
+            <AmazonSessionID>403-5402395-8085901</AmazonSessionID>
+            <OrderDate>2014-02-07T09:01:59+00:00</OrderDate>
+            <OrderPostedDate>2014-02-07T09:01:59+00:00</OrderPostedDate>
+            <BillingData>
+                <BuyerEmailAddress>bjk9gfg44kckkgr@marketplace.amazon.it</BuyerEmailAddress>
+                <BuyerName>Spizzico Massimo</BuyerName>
+                <BuyerPhoneNumber>3299226489</BuyerPhoneNumber>
+                <Address>
+                    <Name>Spizzico Massimo</Name>
+                    <AddressFieldOne>Via De Deo 15</AddressFieldOne>
+                    <City>Bari</City>
+                    <StateOrRegion>Ba</StateOrRegion>
+                    <PostalCode>70126</PostalCode>
+                    <CountryCode>IT</CountryCode>
+                    <PhoneNumber>3299226489</PhoneNumber>
+                </Address>
+            </BillingData>
+            <FulfillmentData>
+                <FulfillmentMethod>Ship</FulfillmentMethod>
+                <FulfillmentServiceLevel>Standard</FulfillmentServiceLevel>
+                <Address>
+                    <Name>Spizzico Massimo</Name>
+                    <AddressFieldOne>Via De Deo 15</AddressFieldOne>
+                    <City>Bari</City>
+                    <StateOrRegion>Ba</StateOrRegion>
+                    <PostalCode>70126</PostalCode>
+                    <CountryCode>IT</CountryCode>
+                    <PhoneNumber>3299226489</PhoneNumber>
+                </Address>
+            </FulfillmentData>
+            <Item>
+                <AmazonOrderItemCode>48571291643219</AmazonOrderItemCode>
+                <SKU>187155</SKU>
+                <Title>Educa 15545 - Puzzle panorama "Il planisfero", 3000 pezzi</Title>
+                <Quantity>1</Quantity>
+                <ProductTaxCode>PTC_PRODUCT_TAXABLE_A</ProductTaxCode>
+                <ItemPrice>
+                    <Component>
+                        <Type>Principal</Type>
+                        <Amount currency="EUR">44.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Shipping</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>Tax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                    <Component>
+                        <Type>ShippingTax</Type>
+                        <Amount currency="EUR">0.00</Amount>
+                    </Component>
+                </ItemPrice>
+                <ItemFees>
+                    <Fee>
+                        <Type>Commission</Type>
+                        <Amount currency="EUR">-6.60</Amount>
+                    </Fee>
+                </ItemFees>
+            </Item>
+        </OrderReport>
+    </Message>
+</AmazonEnvelope>

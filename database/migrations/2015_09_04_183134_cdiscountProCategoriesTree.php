@@ -30,6 +30,6 @@ class CdiscountProCategoriesTree extends Migration
      */
     public function down()
     {
-        Schema::drop('cdiscount_pro_categories_tree'); //
+        //Schema::drop('cdiscount_pro_categories_tree'); //
     }
 }

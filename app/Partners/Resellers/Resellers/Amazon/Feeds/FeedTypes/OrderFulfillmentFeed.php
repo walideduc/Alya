@@ -2,7 +2,7 @@
 namespace alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes ;
 use alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedType;
 
-class OrderFulfillmentFeed extends FeedType { //TODD
+class OrderFulfillmentFeed extends FeedType {
 	public $enumeration = '_POST_ORDER_FULFILLMENT_DATA_';
 	public $countryCode;
 	public $processingTimeEstimated = 17;

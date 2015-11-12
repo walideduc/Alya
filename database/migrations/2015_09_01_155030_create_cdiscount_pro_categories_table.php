@@ -26,6 +26,6 @@ class CreateCdiscountProCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('cdiscount_pro_categories');
+        //Schema::drop('cdiscount_pro_categories');
     }
 }

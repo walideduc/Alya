@@ -45,6 +45,6 @@ class CreateCdiscountProProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('cdiscount_pro_products');
+        //Schema::drop('cdiscount_pro_products');
     }
 }

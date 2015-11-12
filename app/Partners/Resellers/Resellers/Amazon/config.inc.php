@@ -21,7 +21,7 @@ define('AWS_SECRET_ACCESS_KEY', 'AWS_SECRET_ACCESS_KEY_xxxxxxxxxxxxxxxxxx');
  * All MWS requests must contain a User-Agent header. The application
  * name and version defined below are used in creating this value.
  ***********************************************************************/
-define('APPLICATION_NAME', 'kfina_market');
+define('APPLICATION_NAME', 'alyya');
 define('APPLICATION_VERSION', '1.0');
 
 /************************************************************************

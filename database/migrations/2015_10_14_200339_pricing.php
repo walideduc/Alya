@@ -45,6 +45,6 @@ class Pricing extends Migration
      */
     public function down()
     {
-        Schema::drop('pricing');
+        //Schema::drop('pricing');
     }
 }

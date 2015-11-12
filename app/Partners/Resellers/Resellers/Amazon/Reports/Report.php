@@ -10,13 +10,10 @@ namespace alyya\Partners\Resellers\Resellers\Amazon\Reports;
 
 use alyya\Partners\Resellers\Resellers\Amazon\AmazonConfig;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\DB;
 
 require_once(dirname(__FILE__). '/../config.inc.php');
 class Report {
     use DispatchesJobs;
-    static $queuesCategory = 'default';
 
     public function requestReport(ReportType $reportType, $startDate = null , $endDate = null ) { //If a report accepts ReportOptions, they will be described in the description of the report in the ReportType enumeration section.Unshipped Orders Report ReportOptions=ShowSalesChannel%3Dtrue
         // $ReportType is created with a good $countryCode ( The verifecation is done in the constrctor of $ReportType )
@@ -56,7 +53,7 @@ class Report {
             $reportType->shortName = $reflect->getShortName() ;
             $seconds = 1*60 ;
             //dd($reportType);
-            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
+            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(AmazonConfig::$reportQueue)->delay($seconds);
             $this->dispatch($job);
             return 1;
         }else {
@@ -73,9 +70,6 @@ class Report {
 
 
     public function getReportRequestList(ReportType $reportType) {
-        DB::table('test_jobs')->insert(
-            ['file' => $reportType->reportRequestId, 'function' => $reportType->shortName]
-        );
         //return 1 ;
         if ($reportType->isScheduled == false) {
             $reportRequestId = $reportType->reportRequestId;
@@ -92,13 +86,13 @@ class Report {
             if ($reportProcessingStatus === '_DONE_') {
                 // program a GetReportList job because the report is ready . Delay or not as you like man
                 //$seconds = 15*60 ;
-                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportList($reportType))->onQueue(self::$queuesCategory);
+                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportList($reportType))->onQueue(AmazonConfig::$reportQueue);
                 $this->dispatch($job);
                 return 1;
             }elseif ($reportProcessingStatus === '_IN_PROGRESS_' || $reportProcessingStatus === '_SUBMITTED_') {
                 // program a GetReportRequestList job again because the report is not yet ready with delay of 15 min.
                 $seconds = 15*60 ;
-                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(self::$queuesCategory)->delay($seconds);
+                $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReportRequestList($reportType))->onQueue(AmazonConfig::$reportQueue)->delay($seconds);
                 $this->dispatch($job);
                 return 0;
             }else {
@@ -138,9 +132,9 @@ class Report {
             $idlist->setId($reportRequestId);
             $request->setReportRequestIdList($idlist);
             $reportType->reportId = self::invokeGetReportListToGetReportId($service, $request , $reportType );
-            dd($reportType);
+            //dd($reportType);
             // program a job of GetReport , do I need a job for this ?
-            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReport($reportType))->onQueue(self::$queuesCategory)->delay(5*60);
+            $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReport($reportType))->onQueue(AmazonConfig::$reportQueue)->delay(5*60);
             $this->dispatch($job);
             /*
              * A structured list of ReportRequestId values.
@@ -148,30 +142,33 @@ class Report {
              */
             return 1 ;
         }else { // for the Scheduled report like  alyya/app/Partners/Resellers/Resellers/Amazon/Reports/ReportTypes/ScheduledXMLOrderReport
-
-            if (!isset($reportRequestId)) {
+            if (!$reportRequestId) { // the $reportRequestId of the Scheduled report is 0
                 $parameters = array (
                     'Merchant' => AmazonConfig::getMerchantIdentifier($reportType->countryCode),
                     'MaxCount' => 10,
                     'Acknowledged' => $reportType->acknowledged,
                     'ReportTypeList' => array ('Type' => array ($reportType->getReportTypeEnumeration())),
                 );
-                $request = new MarketplaceWebService_Model_GetReportListRequest($parameters);
+                $request = new \MarketplaceWebService_Model_GetReportListRequest($parameters);
                 if (isset($startDate)) {
                     $request->setAvailableFromDate($startDate);
                 }
                 if (isset($endDate)) {
                     $request->setAvailableToDate($endDate);
                 }
+                //dd($reportType);
                 $reportIdArray = self::invokeGetReportListToGetReportIdArray($service, $request);
                 if (isset($reportIdArray)) {
                     self::stock_Reports_Infos($reportIdArray);
-                    $date = new DateTime();
+                    $i = 1;
                     foreach ($reportIdArray as $reportInfo_object) { // is an object of stdClass class ;)
                         $reportType->reportRequestId = $reportInfo_object->reportRequestId;
                         $reportType->reportId = $reportInfo_object->reportId;
-                        task::push(__CLASS__, 'GetReport',array($reportType),$date->format('Y-m-d H:i:s'),2);
-                        $date->add( new DateInterval('PT2M'));
+                        //dd($reportType);
+                        $delay = $i*1*60 ; // GetReport job for every Report with a delay of 3 minutes
+                        $job = (New \alyya\Jobs\Resellers\Amazon\Reports\GetReport($reportType))->onQueue(AmazonConfig::$reportQueue)->delay($delay);
+                        $this->dispatch($job);
+                        ++$i ;
                     }
                 }
                 return sizeof($reportIdArray);
@@ -181,6 +178,9 @@ class Report {
 
     }
 
+     static function stock_Reports_Infos($reportIdArray){
+
+     }
     private static function invokeGetReportListToGetReportId(\MarketplaceWebService_Interface $service, $request , $reportType )  {
         echo ' invokeGetReportListToGetReportId function  ';
         //require 'invokeGetReportList.inc.php';
@@ -190,8 +190,23 @@ class Report {
 
     private static function invokeGetReportListToGetReportIdArray(\MarketplaceWebService_Interface $service, $request)  {
         echo ' invokeGetReportListToGetReportIdArray function  ';
-        require 'invokeGetReportListToGetReportIdArray.inc.php';
-        return $reportIdArray;
+        if (!AmazonConfig::$development){
+            require 'invokeGetReportListToGetReportIdArray.inc.php';
+            return $reportIdArray;
+        }else{
+            for ($i = 1 ;$i<=3 ;++$i){
+                $reportInfo_object = new \stdClass();
+                $reportInfo_object->reportId = $i * 1111111111 ;
+                $reportInfo_object->reportType = 'reportType';
+                $reportInfo_object->reportRequestId = $i* 11111 ;
+                $reportInfo_object->availableDate ='availableDate';
+                $reportInfo_object->acknowledged = 'acknowledged';
+                $reportInfo_object->acknowledgedDate = 'acknowledgedDate' ;
+                $reportIdArray[] = $reportInfo_object;
+            }
+            return $reportIdArray;
+        }
+
         /*This array contains a number of $reportInfo_object with the fallow structure
             $reportInfo_object->reportId
             $reportInfo_object->reportType
@@ -205,7 +220,6 @@ class Report {
 
 
     public function GetReport(ReportType $reportType) {
-        //dd(' Change the fucking MERCHANT_ID ,to be served from AmazonConfig ');
         $reportId = $reportType->reportId ;
         $service = self::setServiceClient();
         $request = new \MarketplaceWebService_Model_GetReportRequest();
@@ -218,13 +232,21 @@ class Report {
 
     private function invokeGetReport($service, $request,ReportType $reportType) {
         ################################ for testing ###############################################################
-        $file = fopen('/home/src/kfina-market/storage/inventory.txt', 'r');
+        //$file = fopen('/home/src/alyya/storage/inventory.txt', 'r'); // InventoryReport
+        $file = fopen('/home/src/alyya/storage/order_report.xml', 'r'); // ScheduledXMLOrderReport
+        /*
+         DB::table('test_jobs')->insert(
+            ['note_1' => 'getReport for '.$this->shortName, 'note_2' => 'report_id '.$this->reportId ]
+        );
+        */
+
         $reportContents = stream_get_contents($file);
         //dd($reportContents);
         $parsed = $reportType->parseReport($reportContents);
-        dd($parsed);
+        //dd($parsed);
+        return 1;
         if ($parsed === True ) {
-            $job = ( new \alyya\Jobs\Resellers\Amazon\Reports\UpdateReportAcknowledgements($reportType,true) )->onQueue(self::$queuesCategory)->delay(180);
+            $job = ( new \alyya\Jobs\Resellers\Amazon\Reports\UpdateReportAcknowledgements($reportType,true) )->onQueue(AmazonConfig::$reportQueue)->delay(180);
             $this->dispatch($job);
         }
         ################################ end for testing ###############################################################

@@ -47,6 +47,6 @@ class GetReport extends Command
         $reportType->reportId = $argument['reportId'];
         $reportType->countryCode = $argument['countryCode'] ;
         $this->report->getReport($reportType);
-        dd($reportType);
+        //dd($reportType);
     }
 }

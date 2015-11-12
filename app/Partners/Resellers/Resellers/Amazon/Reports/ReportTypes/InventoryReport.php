@@ -7,7 +7,7 @@ class InventoryReport extends ReportType {
 
 	public $reportTypeEnumeration = '_GET_FLAT_FILE_OPEN_LISTINGS_DATA_' ;
 	public $countryCode ;
-	public $isScheduled = 0 ;
+	public $isScheduled = 0;
 
 	function __construct() {
         parent::__construct(__CLASS__);

@@ -28,6 +28,6 @@ class CategoryCdiscountProCategory extends Migration
      */
     public function down()
     {
-        Schema::drop('category_cdiscount_pro_category');
+        //Schema::drop('category_cdiscount_pro_category');
     }
 }

@@ -30,6 +30,6 @@ class CreateAmazonInventory extends Migration
      */
     public function down()
     {
-        Schema::drop('amazon_inventory');
+        //Schema::drop('amazon_inventory');
     }
 }

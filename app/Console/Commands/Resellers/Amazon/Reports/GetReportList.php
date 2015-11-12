@@ -16,8 +16,9 @@ class GetReportList extends Command
      */
     protected $signature = 'amazon:getReportList
                             { shortName : ReportType short class name }
-                            { reportRequestId : returned by RequestReport function }
-                            { countryCode }';
+                            { countryCode }
+                            { reportRequestId=0 : Optional argument returned by RequestReport function }
+                            ';
 
     /**
      * The console command description.
@@ -46,10 +47,26 @@ class GetReportList extends Command
     {
         $argument = $this->argument();
         $reportType = App::make($argument['shortName']);
-        //debug_kfina($reportType);
         $reportType->reportRequestId = $argument['reportRequestId'];
         $reportType->countryCode = $argument['countryCode'] ;
-        $this->report->getReportList($reportType);
         //dd($reportType);
+
+        # begin testing the coherence of inputs ************************
+        if(false==$reportType->reportRequestId){// The default value '0' was assigned to reportRequestId and this means the report is scheduled
+            if($reportType->isScheduled==false){
+                $this->error('this report is not scheduled , the third optional reportRequestId is needed');
+                dd('execution was stop');
+            }
+        }else{
+            if($reportType->isScheduled==true){
+                $this->error('this report is scheduled , so no reportRequestId is needed , Make No SENSE ');
+                dd('execution was stop');
+            }
+        }
+        # end testing the coherence of inputs ************************
+
+        //dd($reportType);
+        $this->report->getReportList($reportType);
+
     }
 }

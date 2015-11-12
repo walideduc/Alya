@@ -11,7 +11,7 @@ class AmazonConfig {
 
     public static $development = true ;
     public static $feedQueue = 'feeds' ;
-    public static $reportQueue = 'feeds' ;
+    public static $reportQueue = 'default' ;
 
     public static $countryCodes = array('fr');//,'de','uk','es','it','fba_fr');
     public static $marketplaceArray = array(

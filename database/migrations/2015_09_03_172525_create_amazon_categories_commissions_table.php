@@ -49,6 +49,6 @@ class CreateAmazonCategoriesCommissionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('amazon_categories_commissions');
+        //Schema::drop('amazon_categories_commissions');
     }
 }

@@ -22,6 +22,7 @@ class GetReport extends Job implements SelfHandling, ShouldQueue
     public function __construct($reportType)
     {
         $this->reportType = $reportType ;
+        //dd($this);
     }
 
     /**
@@ -34,7 +35,6 @@ class GetReport extends Job implements SelfHandling, ShouldQueue
         Artisan::call('amazon:getReport', [
             'shortName'   =>  $this->reportType->shortName ,
             'reportId' => $this->reportType->reportId ,
-            'reportRequestId' => $this->reportType->reportRequestId ,
             'countryCode'=> $this->reportType->countryCode ,
         ]);
     }

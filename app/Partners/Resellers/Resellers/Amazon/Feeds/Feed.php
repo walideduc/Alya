@@ -15,7 +15,6 @@ require_once(dirname(__FILE__). '/../config.inc.php');
 
 class Feed {
     use DispatchesJobs ;
-    static $queuesCategory = 'feeds';
     public function SubmitFeed(FeedType $feedType) {
 
         /********* Begin creation the request Block *********/
@@ -58,7 +57,7 @@ class Feed {
             $parametersFeed->countryCode  = $feedType->countryCode;
             $parametersFeed->class  = get_class($feedType);
             $seconds = $feedType->getProcessingTimeEstimated() * 60 ;
-            $job = (new \alyya\Jobs\Resellers\Amazon\Feeds\GetFeedSubmissionList($parametersFeed))->onQueue(self::$queuesCategory)->delay($seconds);
+            $job = (new \alyya\Jobs\Resellers\Amazon\Feeds\GetFeedSubmissionList($parametersFeed))->onQueue(AmazonConfig::$feedQueue)->delay($seconds);
             //var_dump(app('Illuminate\Contracts\Bus\Dispatcher'));
             $this->dispatch($job);
             return $submissionId;

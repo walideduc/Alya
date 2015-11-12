@@ -28,6 +28,7 @@ class Kernel extends ConsoleKernel
         \alyya\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
         \alyya\Console\Commands\PricingTest::class,
         \alyya\Console\Commands\PixmaniaTest::class,
+        \alyya\Console\Commands\Resellers\Amazon\Products\GetCompetitorsPrices::class,
 
     ];
 

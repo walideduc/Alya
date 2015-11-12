@@ -2,7 +2,8 @@
 
 namespace alyya\Console\Commands\Resellers\Amazon\Reports;
 
-use alyya\Partners\Resellers\Resellers\Amazon\AmazonReseller;
+
+use alyya\Partners\Resellers\Resellers\Amazon\Reports\Report;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 
@@ -32,9 +33,9 @@ class RequestReport extends Command
      *
      * @return void
      */
-    public function __construct(AmazonReseller $amazonReseller)
+    public function __construct(Report $report)
     {
-        $this->amazonReseller = $amazonReseller ;
+        $this->report = $report ;
         parent::__construct();
     }
 
@@ -49,7 +50,7 @@ class RequestReport extends Command
         $countryCode = $this->argument('countryCode');
         $reportType = App::make($reportTypeInput);
         if($reportType->setCountryCode($countryCode)){
-            $res = $this->amazonReseller->report->requestReport($reportType);
+            $res = $this->report->requestReport($reportType);
         }else{
             $this->info(" This countryCode is not supported yet ");
         }

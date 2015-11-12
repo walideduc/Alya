@@ -45,6 +45,6 @@ class PixmaniaProProducts extends Migration
      */
     public function down()
     {
-        Schema::drop('pixmania_pro_products');
+        //Schema::drop('pixmania_pro_products');
     }
 }

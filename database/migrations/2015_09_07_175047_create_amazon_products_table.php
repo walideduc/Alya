@@ -55,6 +55,6 @@ class CreateAmazonProductsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('amazon_products');
+        //Schema::drop('amazon_products');
     }
 }

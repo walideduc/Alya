@@ -91,7 +91,10 @@ class KfinaServiceProvider extends ServiceProvider
             return new \alyya\Partners\Resellers\Resellers\Amazon\Reports\ReportTypes\ScheduledXMLOrderReport();
         });
 
-
+        ############################### Products ########################################
+        $this->app->bind('Product', function () {
+            return new \alyya\Partners\Resellers\Resellers\Amazon\Products\Product();
+        });
 
 
 

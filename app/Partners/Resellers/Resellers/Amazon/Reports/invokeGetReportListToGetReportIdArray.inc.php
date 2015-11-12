@@ -21,7 +21,7 @@ try {
 		}
 		$reportInfoList = $getReportListResult->getReportInfoList();
 		foreach ($reportInfoList as $reportInfo) {
-			$reportInfo_object = new stdClass();
+			$reportInfo_object = new \stdClass();
 			echo("                ReportInfo\n");
 			if ($reportInfo->isSetReportId())
 			{
