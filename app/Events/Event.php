@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Events;
+namespace Alyya\Events;
 
 abstract class Event
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Console\Commands;
+namespace Alyya\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

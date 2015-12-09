@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http\Controllers;
+namespace Alyya\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http\Middleware;
+namespace Alyya\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

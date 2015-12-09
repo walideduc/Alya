@@ -34,7 +34,6 @@ class CreateCdiscountProProductsTable extends Migration
             $table->unsignedInteger('poids')->nullable();
             $table->unsignedInteger('quantity')->nullable();
             $table->boolean('is_new')->nullable();
-            $table->unsignedInteger('category_id');
         });
     }
 

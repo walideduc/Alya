@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(alyya\User::class, function ($faker) {
+$factory->define(Alyya\User::class, function ($faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,

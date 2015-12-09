@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http\Middleware;
+namespace Alyya\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

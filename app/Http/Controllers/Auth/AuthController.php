@@ -1,10 +1,10 @@
 <?php
 
-namespace alyya\Http\Controllers\Auth;
+namespace Alyya\Http\Controllers\Auth;
 
-use alyya\User;
+use Alyya\User;
 use Validator;
-use alyya\Http\Controllers\Controller;
+use Alyya\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

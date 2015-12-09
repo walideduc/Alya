@@ -15,7 +15,6 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->unsignedInteger('category_id');
             $table->unsignedInteger('supplier_id');
             $table->string('supplier_ref');
             /*The second param is to manually set the name of the unique index. Use an array as the first param to create a unique key across multiple columns.*/

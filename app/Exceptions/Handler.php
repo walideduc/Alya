@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Exceptions;
+namespace Alyya\Exceptions;
 
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;

@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http;
+namespace Alyya\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,11 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \alyya\Http\Middleware\EncryptCookies::class,
+        \Alyya\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \alyya\Http\Middleware\VerifyCsrfToken::class,
+        \Alyya\Http\Middleware\VerifyCsrfToken::class,
     ];
 
     /**
@@ -26,8 +26,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \alyya\Http\Middleware\Authenticate::class,
+        'auth' => \Alyya\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \alyya\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Alyya\Http\Middleware\RedirectIfAuthenticated::class,
     ];
 }

@@ -6,7 +6,7 @@
  * Time: 15:26
  */
 
-namespace alyya\Partners\Resellers;
+namespace Alyya\Partners\Resellers;
 
 
 class AbstractReseller {

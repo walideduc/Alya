@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Jobs;
+namespace Alyya\Jobs;
 
 use Illuminate\Bus\Queueable;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace alyya\Http\Controllers\Auth;
+namespace Alyya\Http\Controllers\Auth;
 
-use alyya\Http\Controllers\Controller;
+use Alyya\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

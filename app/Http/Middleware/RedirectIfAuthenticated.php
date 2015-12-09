@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http\Middleware;
+namespace Alyya\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

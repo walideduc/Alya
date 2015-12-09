@@ -1,8 +1,8 @@
 <?php
 
-namespace alyya\Console\Commands;
+namespace Alyya\Console\Commands;
 
-use alyya\Http\Controllers\ProductController;
+use Alyya\Http\Controllers\ProductController;
 use Illuminate\Console\Command;
 
 class PricingTest extends Command

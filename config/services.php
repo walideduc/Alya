@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => alyya\User::class,
+        'model'  => Alyya\User::class,
         'key'    => '',
         'secret' => '',
     ],

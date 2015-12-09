@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -140,12 +140,13 @@ return [
         /*
          * Application Service Providers...
          */
-        alyya\Providers\AppServiceProvider::class,
-        alyya\Providers\EventServiceProvider::class,
-        alyya\Providers\RouteServiceProvider::class,
+        Alyya\Providers\AppServiceProvider::class,
+        Alyya\Providers\EventServiceProvider::class,
+        Alyya\Providers\RouteServiceProvider::class,
 
-        alyya\Providers\KfinaServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class, // laravel-debugbar
+        Alyya\Providers\AlyyaServiceProvider::class,
+        //Barryvdh\Debugbar\ServiceProvider::class, // laravel-debugbar
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class, // LaravelShoppingcart
 
 
 
@@ -196,7 +197,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,// laravel-debugbar , If you want to use the facade to log messages.
+        //'Debugbar'  => Barryvdh\Debugbar\Facade::class, // laravel-debugbar , If you want to use the facade to log messages.
+        'Cart'      => Gloudemans\Shoppingcart\Facades\Cart::class, // LaravelShoppingcart
 
     ],
 

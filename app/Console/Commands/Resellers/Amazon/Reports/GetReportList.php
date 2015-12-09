@@ -1,8 +1,8 @@
 <?php
 
-namespace alyya\Console\Commands\Resellers\Amazon\Reports;
+namespace Alyya\Console\Commands\Resellers\Amazon\Reports;
 
-use alyya\Partners\Resellers\Resellers\Amazon\Reports\Report;
+use Alyya\Partners\Resellers\Amazon\Reports\Report;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\App;
 

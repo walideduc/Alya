@@ -1,9 +1,9 @@
 <?php
 
-namespace alyya\Jobs\Resellers\Amazon\Feeds;
+namespace Alyya\Jobs\Resellers\Amazon\Feeds;
 
-use alyya\Jobs\Job;
-use alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed;
+use Alyya\Jobs\Job;
+use Alyya\Partners\Resellers\Amazon\Feeds\FeedTypes\ProductFeed;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Bus\SelfHandling;

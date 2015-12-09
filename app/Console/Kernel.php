@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Console;
+namespace Alyya\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -14,21 +14,22 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \alyya\Console\Commands\Inspire::class,
-        \alyya\Console\Commands\LogDemo::class,
-        \alyya\Console\Commands\Suppliers\GetCatalog::class,
-        \alyya\Console\Commands\Suppliers\ParseCatalog::class,
-        \alyya\Console\Commands\Suppliers\ActualiseProductsTable::class,
-        \alyya\Console\Commands\Resellers\UpdateCatalog::class,
-        \alyya\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
-        \alyya\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
-        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
-        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReportList::class,
-        \alyya\Console\Commands\Resellers\Amazon\Reports\GetReport::class,
-        \alyya\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
-        \alyya\Console\Commands\PricingTest::class,
-        \alyya\Console\Commands\PixmaniaTest::class,
-        \alyya\Console\Commands\Resellers\Amazon\Products\GetCompetitorsPrices::class,
+        \Alyya\Console\Commands\Inspire::class,
+        \Alyya\Console\Commands\LogDemo::class,
+        \Alyya\Console\Commands\Suppliers\GetCatalog::class,
+        \Alyya\Console\Commands\Suppliers\ParseCatalog::class,
+        \Alyya\Console\Commands\Suppliers\ActualiseProductsTable::class,
+        \Alyya\Console\Commands\Resellers\UpdateCatalog::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Feeds\SubmitFeed::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Reports\RequestReport::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Reports\GetReportRequestList::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Reports\GetReportList::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Reports\GetReport::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Reports\UpdateReportAcknowledgements::class,
+        \Alyya\Console\Commands\PricingTest::class,
+        \Alyya\Console\Commands\PixmaniaTest::class,
+        \Alyya\Console\Commands\Resellers\Amazon\Products\GetCompetitorsLowestOffers::class,
+        \Alyya\Console\Commands\FeedProductCategoriesTables::class,
 
     ];
 

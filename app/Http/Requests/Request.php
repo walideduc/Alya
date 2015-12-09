@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Http\Requests;
+namespace Alyya\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

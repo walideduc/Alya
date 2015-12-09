@@ -1,6 +1,6 @@
 <?php
 
-namespace alyya\Console\Commands\Resellers;
+namespace Alyya\Console\Commands\Resellers;
 
 use Illuminate\Console\Command;
 
@@ -49,7 +49,7 @@ class UpdateCatalog extends Command
             return true;
 
         }catch (\ReflectionException $e ){
-            $this->error('This Reseller does not exist , AmazonReseller ');
+            $this->error('This Reseller does not exist , AmazonReseller or AlyyaReseller ');
             return false;
         }
     }

@@ -11,9 +11,45 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'IndexController@index');
+Route::get('catalogue', 'IndexController@catalogue');
+Route::get('cart', 'IndexController@cart');
+Route::get('category/{slug}_{id}', 'IndexController@category')->where('slug', '^[1-9]\d*$')->where('id', '^[1-9]\d*$');
+Route::get('categories', 'IndexController@categories');
+Route::get('checkout', 'IndexController@checkout');
+Route::get('about', 'IndexController@about');
+Route::get('contact', 'IndexController@contact');
+Route::get('typography', 'IndexController@typography');
+Route::get('product/{slug_id}', [
+    'as' => 'product', 'uses' => 'IndexController@product'
+]);
+Route::get('compare', 'IndexController@compare');
+Route::get('login', 'IndexController@login');
+Route::get('register', 'IndexController@register');
+
+Route::group(['prefix' => 'cart'], function () {
+    //Route::match(['get', 'post'],'add/{product_id?}', 'CartController@add');
+    Route::post('add', 'CartController@add');
+    Route::get('add', 'CartController@add');
 });
+
+//Route::get('add', function(){
+//    $res = Cart::add(array(
+//        array('id' => '293ad', 'name' => 'Product 1', 'qty' => 1, 'price' => 10.00),
+//        array('id' => '4832k', 'name' => 'Product 2', 'qty' => 1, 'price' => 10.00, 'options' => array('size' => 'large'))
+//    ));
+//    return $res ;
+//});
+
+
+
+Route::get('pages', function () {
+    return view('pages.index');
+});
+Route::get('blade', function () {
+    return view('child',['name'=>'Walid','records' => 0]);
+});
+
 
 Route::get('/getcatalog', function () {
     echo ' url /getcatalog ';
@@ -46,7 +82,7 @@ Route::get('/updateCatalog', function () {
 });
 
 Route::get('/submitFeed', function () {
-    //return \alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+    //return \Alyya\Partners\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
   $exitCode = Artisan::call('amazon:submitFeed', [
         'feedType' => 'ProductFeed',
         'countryCode'=>'fr'
@@ -56,7 +92,7 @@ Route::get('/submitFeed', function () {
 
 Route::get('/getReport', function () {
     ini_set('max_execution_time', 300);
-    //return \alyya\Partners\Resellers\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
+    //return \Alyya\Partners\Resellers\Amazon\Feeds\FeedTypes\ProductFeed::triggerOtherFeeds('fr');
     $exitCode = Artisan::call('amazon:getReport', [
         'shortName' => 'InventoryReport',
         'reportId' => 987654321 ,
@@ -67,7 +103,7 @@ Route::get('/getReport', function () {
 
 //Route::controller('product','ProductController');
 
-Route::resource('product', 'ProductController');
+//Route::resource('product', 'ProductController');
 
 
 

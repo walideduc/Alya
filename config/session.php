@@ -109,7 +109,8 @@ return [
     |
     */
 
-    'cookie' => 'laravel_session',
+    //'cookie' => 'laravel_session',
+    'cookie' => 'alyya_session',
 
     /*
     |--------------------------------------------------------------------------
