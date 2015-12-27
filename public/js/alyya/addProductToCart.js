@@ -10,8 +10,7 @@ $(document).ready(function () {
     });
     $('#addForm').submit(function(){
         var quantityToAdd = $('#quantityToAdd').val();
-        var product_id = 1 ;
-        console.log(quantityToAdd);
+        var product_id = $('#product_id').val() ;
         $.ajax({
             type: "POST",
             url: "/cart/add",

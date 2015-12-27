@@ -21,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $categoriesLevel_1 = Category::whereNull('parent')->get();
         view()->share('categories', $categoriesLevel_1);
+        $bestseller = Category::whereNull('parent')->get();
+        $bestseller = Category::find(1)->products->first();
+        view()->share('bestseller', $bestseller);
  /*       Blade::directive('categories', function() {
             $categoriesLevel_1 = Category::whereNull('parent')->get();
             dd($categoriesLevel_1);

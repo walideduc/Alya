@@ -2,7 +2,7 @@
 
 namespace Alyya\Http\Controllers\Auth;
 
-use Alyya\User;
+use Alyya\Models\Site\User;
 use Validator;
 use Alyya\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    protected $redirectPath = '/';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -41,10 +42,13 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+        //dd($data);
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
+            'condition' => 'required',
         ]);
     }
 
@@ -57,7 +61,7 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name' => $data['first_name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

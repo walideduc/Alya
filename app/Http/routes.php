@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+
+
+Route::get('/', [
+    'as' => 'home', 'uses' => 'IndexController@index'
+]);
 Route::get('catalogue', 'IndexController@catalogue');
-Route::get('cart', 'IndexController@cart');
 Route::get('category/{slug}_{id}', 'IndexController@category')->where('slug', '^[1-9]\d*$')->where('id', '^[1-9]\d*$');
 Route::get('categories', 'IndexController@categories');
 Route::get('checkout', 'IndexController@checkout');
@@ -24,35 +27,38 @@ Route::get('product/{slug_id}', [
     'as' => 'product', 'uses' => 'IndexController@product'
 ]);
 Route::get('compare', 'IndexController@compare');
-Route::get('login', 'IndexController@login');
-Route::get('register', 'IndexController@register');
+Route::get('/user/profile', 'UserController@profile');
+Route::get('/user/logout', 'UserController@logout');
+
+
+//Route::match(['get', 'post'],'add/{product_id?}', 'CartController@add');
 
 Route::group(['prefix' => 'cart'], function () {
-    //Route::match(['get', 'post'],'add/{product_id?}', 'CartController@add');
     Route::post('add', 'CartController@add');
     Route::get('add', 'CartController@add');
 });
-
-//Route::get('add', function(){
-//    $res = Cart::add(array(
-//        array('id' => '293ad', 'name' => 'Product 1', 'qty' => 1, 'price' => 10.00),
-//        array('id' => '4832k', 'name' => 'Product 2', 'qty' => 1, 'price' => 10.00, 'options' => array('size' => 'large'))
-//    ));
-//    return $res ;
-//});
+Route::group(['prefix' => 'order'], function () {
+    Route::get('cart', [
+        'as' => 'order_cart', 'uses' => 'OrderController@show'
+    ]);
+    Route::match(['get', 'post'],'shipping', [
+        'as' => 'order_shipping', 'uses' => 'OrderController@shipping', 'middleware' => 'auth'
+    ]);
+    Route::match(['get', 'post'],'transporter', [
+        'as' => 'order_transporter', 'uses' => 'OrderController@transporter', 'middleware' => 'auth'
+    ]);
+});
 
 
 
 Route::get('pages', function () {
     return view('pages.index');
 });
-Route::get('blade', function () {
-    return view('child',['name'=>'Walid','records' => 0]);
-});
+
 
 
 Route::get('/getcatalog', function () {
-    echo ' url /getcatalog ';
+    echo base_path('storage/') ;
 /*    $exitCode = Artisan::call('supplier:getCatalog', [
         'supplier' => 'CdiscountPro'
     ]);
@@ -101,9 +107,16 @@ Route::get('/getReport', function () {
     return $exitCode;
 });
 
-//Route::controller('product','ProductController');
 
-//Route::resource('product', 'ProductController');
+// Authentication routes...
+//Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::get('auth/login', 'Auth\AuthController@getRegister');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
 

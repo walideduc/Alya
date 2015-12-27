@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => Alyya\User::class,
+    'model' => Alyya\Models\Site\User::class,
 
     /*
     |--------------------------------------------------------------------------

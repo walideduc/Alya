@@ -25,7 +25,8 @@ class CdiscountPro extends AbstractSupplier  {
 
 
     protected $referenceList = array(
-    'CATALOG' =>  array(    'local_dir' 		=> '/home/src/kfina-market/storage/',
+    'CATALOG' =>  array(
+        'local_dir' 		=>  'storage/',
         'local_archive_dir' => '/home/cdiscount_pro/archive/catalog/',
         'remote_dir' 		=> '/home/cdiscount/remote_server/',
         'file_name' 		=> 'catalogue_CdiscountPro.CSV',
@@ -47,7 +48,7 @@ class CdiscountPro extends AbstractSupplier  {
     }
     public function parseCatalog(){
         $fileName = $this->referenceList['CATALOG']['file_name'] ;
-        $filePath = $this->referenceList['CATALOG']['local_dir'] . $fileName ;
+        $filePath = base_path($this->referenceList['CATALOG']['local_dir']) . $fileName ;
         $fp = fopen($filePath, 'r') ;
         if(!$fp)
         {
@@ -80,7 +81,6 @@ class CdiscountPro extends AbstractSupplier  {
         $i = 0 ;
         while($dataLine = $this->readline1($fp, $fieldNames))
         {
-            $categoryId = $this->getCdiscountProCategory_id($dataLine->categorie_1);
             if( is_null($cdicountProProductModel::productAlreadyExist($dataLine->ref_sku)->first()) ){
                 // Product does not exist , I will create it .
                 $cdicountProProductModel::create([
@@ -103,7 +103,6 @@ class CdiscountPro extends AbstractSupplier  {
                     'poids' => $dataLine->poids,
                     'quantity' => self::$quantity ,
                     'is_new' => 1,
-                    'category_id' => $categoryId,
                 ]);
             }else{
                 // Product exist , I will update it .
@@ -126,12 +125,11 @@ class CdiscountPro extends AbstractSupplier  {
                     'poids' => $dataLine->poids,
                     'quantity' => self::$quantity ,
                     'is_new' => 0,
-                    'category_id' => $categoryId,
                 ]);
             }
-            $i++;
-            /*if($i > 50)
-                dd($cdicountProProductModel->toArray());*/
+//            $i++;
+//            if($i > 50)
+//                dd($cdicountProProductModel->toArray());
         }
         // TODO étape n: fin de transaction
         return 1 ;

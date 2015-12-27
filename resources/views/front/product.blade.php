@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.master')
 @section('content')
 
     @if (count($errors) > 0)
@@ -177,6 +177,7 @@
                                         <form id="addForm" action="#">
                                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                             <input type="text" class="form-control input-qty text-center" value="1" id="quantityToAdd">
+                                            <input type="hidden" class="form-control input-qty text-center" value="{{$product->id}}" id="product_id">
                                             <button type="submit" class="btn btn-default pull-left" > <i class="fa fa-shopping-cart"  > </i> Add to Cart</button>
                                         </form>
 

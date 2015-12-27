@@ -44,7 +44,6 @@ class CreateAmazonProductsTable extends Migration
             $table->dateTime('stock_submitted_at');
             $table->dateTime('image_changed_at');
             $table->dateTime('image_submitted_at');
-            $table->dateTime('image_submitted_at');
             $table->dateTime('price_watched_at')->default('0000-00-00 00:00:00');
             $table->unsignedTinyInteger('price_watched_done')->default(0)->comment('to restart the getCompetitorsPrices');
             $table->unsignedTinyInteger('to_delete')->default(0)->comment('for delete feed ,1 to delete , 2 is deleted ');
